@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Minut'Papillon - Documentation officielle</title>
+        <meta charset="utf-8">                                                  <!-- Prise en charge textuelle selon la norme UTF-8 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">                   <!-- Assure que IE utilise dernière version du moteur de rendu-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- Gestion des zooms, ici occupation de tt l'espace, a 100% -->
+        <meta name="description" content="Page test Bootstrap">
+        <meta name="author" content="COUPEZ Frédéric">
+            
+        <link rel="icon" href="img/favicon.ico">            
+        <link href="css/bootstrap.min.css" rel="stylesheet">   <!-- Bootstrap core CSS -->
+        <link href="css/dashboard.css" rel="stylesheet"> <!-- Theme Custom -->
+        
+        <!-- Si IE < IE9, html5shiv creer des éléments pour que IE8 interprete correctement HTML5, respond permet le Responsive Web Design -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>	
+        <!--= BARRE PRINCIPALE DE NAVIGATION (TOP) =-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <a class="navbar-brand" href="index.html">Minut'Papillon</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="HowToUseIt.html">Manuel d'utilisation</a></li> 
+                <li><a href="Cahier.html">Cahier des charges</a></li>                 
+                <li><a href="BDD.html">BDD</a></li>
+                <li><a href="CSharp.html">C#</a></li>
+                <li><a href="about.html">A propos...</a></li>  
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <!--= CONTAINER (BODY) =-->
+        <div class="container-fluid">
+            <div class="row">
+                
+                <!--= MENU DE NAVIGATION (LEFT) =-->
+                <div class="col-sm-2 col-md-2 sidebar">
+                    <div class="sidebar-module">
+                      ¤ <b>SOMMAIRE</b> ¤
+                      <ul class="nav nav-sidebar">
+                          <li><a href="BDD.html#1">- Telechargements</a></li>
+                          <li><a href="BDD.html#2">- Installation</a></li>
+                          <li><a href="BDD.html#3">- Contenu des fichiers</a></li>
+                      </ul>
+                    </div>  
+                </div>
+                
+                <!--= SECTION DE CONTENU (RIGHT) =--> <!-- <div class="col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-2 main"> -->
+                <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 main">
+                  <h1 class="page-header">BASE DE DONNÉES</h1>
+                                      <!--= ALBUM PHOTO (TOP) =-->
+                    <div class="row placeholders">
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <a href="#" data-toggle="modal" data-target=".pop-up-1"><img src="img/MCD_MinutPapillon.jpg" class="img-responsive" alt="MCD"></a>
+                          <h4>MCD</h4>
+                          <span class="text-muted">Modèle Conceptuel de Données</span>
+                        </div>
+                        <!-- Apercu de l'image -->
+                        <div class="modal fade pop-up-1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-2" aria-hidden="true">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myLargeModalLabel-2">Modèle Conceptuel de Données</h4>
+                              </div>
+                              <div class="modal-body">
+                              <img src="img/MCD_MinutPapillon.jpg" class="img-responsive img-rounded center-block" alt="">
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div>
+                          
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <a href="#" data-toggle="modal" data-target=".pop-up-2"><img src="img/MLD_MinutPapillon.png" class="img-responsive" alt="MLD"></a>
+                          <h4>MLD</h4>
+                          <span class="text-muted">Modèle Logique de Données</span>
+                        </div>
+                        <div class="modal fade pop-up-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-2" aria-hidden="true">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myLargeModalLabel-2">Modèle Logique de Données</h4>
+                              </div>
+                              <div class="modal-body">
+                              <img src="img/MLD_MinutPapillon.png" class="img-responsive img-rounded center-block" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div> 
+                  
+                  <!--= CONTENU DESCRIPTIF (CENTER) =-->
+                  <h2 class="sub-header"><a name="1">1</a>/ Telechargement des fichiers</h2>
+                    <div class="table-responsive">                        
+                        <p><a href="projet/MP_BDD.zip"><img class="img-responsive2" src="img/telecharger.jpg" alt="Telecharger le ZIP"/></a>
+                        Il vous faudra recup les fichiers, et installer <a target="_blank" href="http://www.microsoft.com/fr-fr/server-cloud/products/sql-server-editions/sql-server-express.aspx">SQL Server</a>.<br>
+                        Contenu du fichier compressé :<br><img class="img-responsive2" src="img/contenuBDD.png" alt=""/></p>
+                    </div>          
+                  
+                  <br><h2 class="sub-header"><a name="2">2</a>/ Installation des fichiers</h2>
+                    <div class="table-responsive">                        
+                        <p>Concernant l'installation de SQL Server, en cas de souci reportez vous à la <a target="_blank" href="https://technet.microsoft.com/fr-fr/library/ms143722%28v=SQL.90%29.aspx">documentation officielle</a>.<br>
+                        Votre fichier .ZIP, une fois décompréssé, vous permet de découvrir des fichiers numérotés de 1 à 5. Ses chiffres représentent l'ordre dans lequel vous devrez impérativement installer les fichiers !<br><br>
+                        Pour ce faire, ouvrez le logiciel SQL Server, préalablement installé. Dans la barre du menu (en haut), cliquez sur "Nouvelle Requête", puis copier-coller le contenu du document et executer le (fleche verte). 
+                        Vous pouvez aussi glisser-deposer les fichiers dans le logiciel SQL Server puis les executer (toujours dans le bon ordre !).</p>      
+                    </div>   
+                  
+                  <br><h2 class="sub-header"><a name="3">3</a>/ Contenu des fichiers</h2>
+                    <div class="table-responsive">                        
+                        <p>En cas de souci avec le télechargement des fichiers, le code source vous est donner ci-dessous :<br></p>
+                        <h4>1 - CREATE DATABASE</h4>
+                        <div style="margin:20px; margin-top:5px"><div class="quotetitle"><b>Spoiler:</b> <input type="button" value="CLIQUEZ ICI POUR AFFICHER LES REQUETES" style="width:80%;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';        this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" /></div><div class="quotecontent"><div style="display: none;"><code>
+                            <br>--------------------------------------
+                            <br>--  CREATION DE LA BASE DE DONNÉES  --
+                            <br>--------------------------------------
+                            <br><br>USE [master]
+                            <br>GO
+                            <br><br>IF exists (SELECT * FROM sys.databases WHERE name='ServeurResto')
+                            <br>DROP DATABASE ServeurResto
+                            <br>GO
+                            <br>CREATE DATABASE ServeurResto 
+                            <br>GO
+                            <br><br>USE [ServeurResto]
+                            <br>GO
+                            <br>CREATE SCHEMA Resto 
+                            <br>GO
+
+                            <br>vCREATE TABLE Resto.ROLE(
+                            <br>        ID_Role 	INT IDENTITY (1,1)   NOT NULL	PRIMARY KEY
+                            <br>        , Role_Libelle      VARCHAR (25) NOT NULL
+                            <br>        , Role_NiveauDroits INT NOT NULL
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.UTILISATEUR(
+                            <br>        ID_User 	INT IDENTITY (1,1)   NOT NULL	PRIMARY KEY
+                            <br>        , User_Pseudo     VARCHAR (50) NOT NULL
+                            <br>        , User_Password   VARCHAR (50) NOT NULL
+                            <br>        , User_NomReel    VARCHAR (50) NULL
+                            <br>        , User_PrenomReel VARCHAR (50) NULL
+                            <br>        , User_Telephone  CHAR (10)	NULL
+                            <br>        , ID_Role 	   INT NOT NULL FOREIGN KEY REFERENCES Resto.ROLE (ID_Role)
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.FACTURE(
+                            <br>        ID_Facture	  INT IDENTITY (1,1)      NOT NULL PRIMARY KEY
+                            <br>        , Facture_DateCrea	  DATETIME NOT NULL
+                            <br>        , Facture_TableNum     INT NOT NULL
+                            <br>        , Facture_NbrCouvert   INT NOT NULL
+                            <br>        , Facture_PrixTotalTTC  FLOAT  NULL
+                            <br>        , Facture_Validee    bit NOT NULL
+                            <br>        , Facture_Cloturee   bit NULL
+                            <br>        , Facture_Modifiee   bit NULL
+                            <br>        , Facture_DateModif  DATETIME NULL
+                            <br>        , ID_User            INT NOT NULL FOREIGN KEY REFERENCES Resto.UTILISATEUR(ID_User)
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.PAIEMENT(
+                            <br>          ID_Paiement    	INT IDENTITY (1,1)		NOT NULL	PRIMARY KEY
+                            <br>        , Paiement_Moyen 	VARCHAR (50)			NOT NULL
+                            <br>        , ID_Facture     	INT  					NOT NULL	FOREIGN KEY REFERENCES Resto.FACTURE(ID_Facture)
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.TVA(
+                            <br>        ID_TVA      		INT IDENTITY (1,1)	NOT NULL PRIMARY KEY
+                            <br>        , TVA_taux 		FLOAT NOT NULL
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.PREFERENCE(
+                            <br>        ID_Preference		 INT IDENTITY (1,1)	NOT NULL PRIMARY KEY
+                            <br>        , Preference_Type   VARCHAR (50) NOT NULL
+                            <br>        , Preference_Libelle VARCHAR(50) NOT NULL
+                            <br>        , Preference_Duree	 VARCHAR (50) NULL
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.TYPEPRODUIT(
+                            <br>        ID_Type      		INT IDENTITY (1,1)	NOT NULL PRIMARY KEY
+                            <br>        , Type_Libelle      VARCHAR (50) NOT NULL
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.CARTE(
+                            <br>        ID_Article           INT IDENTITY (1,1)	NOT NULL PRIMARY KEY
+                            <br>        , Article_Disponible bit NOT NULL
+                            <br>        , Article_Nom       VARCHAR (50) NOT NULL
+                            <br>        , Article_Format    VARCHAR (250)	NULL
+                            <br>        , Article_PrixHT     FLOAT  NOT NULL
+                            <br>        , Article_Supplement bit NOT NULL
+                            <br>        , Article_Preference bit NOT NULL
+                            <br>        , Article_Alcoolise  bit NOT NULL
+                            <br>        , Article_ImageURL   VARCHAR (250) NULL
+                            <br>        , Article_QuantiteEnStock	INT NOT NULL
+                            <br>        , ID_Type	INT NOT NULL FOREIGN KEY REFERENCES Resto.TYPEPRODUIT(ID_Type)
+                            <br>        , ID_Tva	INT NOT NULL FOREIGN KEY REFERENCES Resto.TVA(ID_TVA)
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.MENU(
+                            <br>        ID_Menu		INT IDENTITY (1,1)	NOT NULL PRIMARY KEY
+                            <br>        , Menu_Disponible 	bit NOT NULL
+                            <br>        , Menu_Libelle     VARCHAR (100) NOT NULL
+                            <br>        , Menu_DateAjout    DATETIME NULL
+                            <br>        , Menu_PrixTTC    	FLOAT NOT NULL
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.GARNITURE(
+                            <br>        ID_Garniture        INT IDENTITY (1,1)	NOT NULL PRIMARY KEY
+                            <br>        , Garniture_Libelle VARCHAR(100) NOT NULL
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.STOCK(
+                            <br>        ID_Stock            INT IDENTITY (1,1)	NOT NULL PRIMARY KEY
+                            <br>        , Stock_Fournisseur    VARCHAR (250) NULL
+                            <br>        , Stock_DateAchat      DATETIME NULL
+                            <br>        , Stock_PrixAchatUnit  INT NULL
+                            <br>        , Stock_QuantiteEntree INT NOT NULL
+                            <br>        , Stock_QuantiteSortie INT NOT NULL
+                            <br>        , ID_Article      INT NOT NULL FOREIGN KEY REFERENCES Resto.CARTE(ID_Article)
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.STATSCONSO(
+                            <br>        ID_StatsConso		INT IDENTITY (1,1) 				NOT NULL PRIMARY KEY
+                            <br>        , Article_Venducarte INT NULL
+                            <br>        , Article_VenduMenu  INT NULL
+                            <br>        , Article_Offert     INT NULL
+                            <br>        , Article_Detruit    INT NULL
+                            <br>        , ID_Article      INT NOT NULL FOREIGN KEY REFERENCES Resto.CARTE(ID_Article)
+                            <br>);
+
+                            <br><br>CREATE TABLE CONFIGFACTURE(
+                            <br>        ID_ConfigFac            int IDENTITY(1,1) NOT NULL PRIMARY KEY
+                            <br>        , ConfigFac_FontSizeTitle Int NOT NULL
+                            <br>        , ConfigFac_FontSizeMax   Int NOT NULL
+                            <br>        , ConfigFac_FontSizeNor   Int NOT NULL
+                            <br>        , ConfigFac_FontSizeMin   Int NOT NULL
+                            <br>        , ConfigFac_LibTitle      Varchar (250)
+                            <br>        , ConfigFac_LibDesc       Varchar (250)
+                            <br>        , ConfigFac_LibAdresse    Varchar (250)
+                            <br>        , ConfigFac_LibNumTel     Varchar (250)
+                            <br>        , ConfigFac_LibThanks     Varchar (250)
+                            <br>        , ConfigFac_LibMention    Varchar (250)
+                            <br>);
+
+                            <br><br>CREATE TABLE [Resto].[CONFIGCOLOR](
+                            <br>        [ID_ConfCol] [int] IDENTITY(1,1) NOT NULL PRIMARY KEY
+                            <br>        , [ConfCol_1] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_1] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_2] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_2] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_3] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_3] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_4] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_4] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_5] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_5] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_6] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_6] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_7] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_7] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_8] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_8] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_9] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_9] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_10] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_10] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_11] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_11] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_12] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_12] [varchar](50) NOT NULL
+                            <br>        , [ConfCol_13] [varchar](50) NOT NULL
+                            <br>        , [ConfFont_13] [varchar](50) NOT NULL
+                            <br>        , [ConfRandom] bit NULL
+                            <br>);
+
+                            <br><br>-- Creation des tables de relations :
+                            <br>CREATE TABLE Resto.REL_Commander(
+                            <br>ID_Facture      INT NOT NULL FOREIGN KEY REFERENCES Resto.FACTURE(ID_Facture)
+                            <br>        , ID_Menu         INT NOT NULL FOREIGN KEY REFERENCES Resto.MENU(ID_Menu)
+                            <br>        , ID_Article      INT NOT NULL FOREIGN KEY REFERENCES Resto.CARTE(ID_Article)
+                            <br>        , Preference_Type   VARCHAR (50) NULL
+                            <br>        , Voir_Serveur    	bit NULL
+                            <br>        , Article_offert    bit NULL
+                            <br>        , Nbr_Article     Int NULL
+                            <br>);
+
+                            <br><br>CREATE TABLE Resto.REL_Composer(
+                            <br>Composer_Type       VARCHAR (30) NOT NULL
+                            <br>        , ID_Menu        INT NOT NULL FOREIGN KEY REFERENCES Resto.MENU(ID_Menu)
+                            <br>        , ID_Article     INT NOT NULL FOREIGN KEY REFERENCES Resto.CARTE(ID_Article)
+                            <br>);
+
+                            <br><br>-- Creation d'un index sur les Pseudonymes d'utilisateurs
+                            <br>CREATE NONCLUSTERED INDEX IX_UTILISATEUR_User_Pseudo ON Resto.UTILISATEUR(User_Pseudo); 
+
+                            <br>GO<br>
+                        </code></div></div></div>
+                        
+                        <h4>2 - INSERT MINIMUM</h4>
+                            <div style="margin:20px; margin-top:5px"><div class="quotetitle"><b>Spoiler:</b> <input type="button" value="CLIQUEZ ICI POUR AFFICHER LES REQUETES" style="width:80%;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';        this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" /></div><div class="quotecontent"><div style="display: none;"><code>
+                                <br>-- INSERTION DE DONNEES
+                                <br><br>USE ServeurResto
+                                <br>GO
+
+                                <br><br> -- CREATION DES ROLES UTILISATEURS [Niv 1 à 3 : acces autorisé / Niv 4 ou + : acces refusé]
+                                <br>	INSERT into Resto.ROLE (Role_Libelle,Role_NiveauDroits) values ('ADMINISTRATEUR',1);
+                                <br>	INSERT into Resto.ROLE (Role_Libelle,Role_NiveauDroits) values ('FORMATEUR',2);
+                                <br>	INSERT into Resto.ROLE (Role_Libelle,Role_NiveauDroits) values ('STAGIAIRE',3);
+                                <br>	INSERT into Resto.ROLE (Role_Libelle,Role_NiveauDroits) values ('ANCIEN FORMATEUR',4);
+                                <br>	INSERT into Resto.ROLE (Role_Libelle,Role_NiveauDroits) values ('ANCIEN STAGIAIRE',4);
+                                <br>	INSERT into Resto.ROLE (Role_Libelle,Role_NiveauDroits) values ('SUPPRIMÉ',5);	-- En cas d'erreur de saisie détectée tardivement
+                                <br>	--  [ NE PAS MODIFIER ! ] --
+                                <br>	GO
+
+                                <br><br> -- CREATION DES LOGINS DE UTILISATEUR [!!! DONNEES DE TEST !!!]
+                                <br>	INSERT into Resto.UTILISATEUR (User_Pseudo,User_Password,User_NomReel,User_PrenomReel,User_Telephone,ID_Role) values ('ADMIN','root','(MCP)','Maître Contrôle Principal','0000000000','1');
+                                <br>	INSERT into Resto.UTILISATEUR (User_Pseudo,User_Password,User_NomReel,User_PrenomReel,User_Telephone,ID_Role) values ('FORMATEUR','chef','Olivier','GABAUT','0000000000','2');
+                                <br>	INSERT into Resto.UTILISATEUR (User_Pseudo,User_Password,User_NomReel,User_PrenomReel,User_Telephone,ID_Role) values ('Serveur1','first','kevin','NOOB','0000000000','3');
+                                <br>	-- ... [ A MODIFIER ET COMPLETER ! ]
+                                <br>	GO
+
+                                <br><br> -- LES TYPES DE PRODUITS (ETAPE 1 A) 
+                                <br>	INSERT into Resto.TVA (TVA_Taux) values ('0.00');
+                                <br>	INSERT into Resto.TVA (TVA_Taux) values ('2.10');
+                                <br>	INSERT into Resto.TVA (TVA_Taux) values ('5.50');
+                                <br>	INSERT into Resto.TVA (TVA_Taux) values ('10.00');	
+                                <br>	INSERT into Resto.TVA (TVA_Taux) values ('20.00');
+                                <br>	-- [A MODIFIER SI BESOIN EST PAR LE CLIENT SELON LA LEGISLATION EN VIGUEUR]
+                                <br>	GO
+
+                                <br><br> -- LES TYPES DE PRODUITS (ETAPE 1 B)
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('AUCUN');
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('BOISSON');
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('ENTREE FROIDE');	
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('ENTREE CHAUDE');
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('PLAT PRINCIPAL');
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('FROMAGE');
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('DESSERT');
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('VIANDE');
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('POISSON');
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('LEGUME');
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('FRUIT');
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('SAUCE');
+                                <br>	INSERT into Resto.TYPEPRODUIT (Type_Libelle) values ('PAIN');
+                                <br>	--  [ NE PAS MODIFIER ! ] --
+                                <br>	GO
+
+                                <br><br> -- CREATION DES ARTICLES (ETAPE 2 A) 
+                                <br>	INSERT into Resto.CARTE (Article_Disponible,Article_Nom,Article_Format,Article_PrixHT,Article_Supplement,Article_Preference,Article_Alcoolise,ID_Type) values (0,'Menu','Ne pas effacer !',0.00,0,0,0,1);
+                                <br>	-- ... [ A MODIFIER ET COMPLETER ! ]
+                                <br>	GO
+
+                                <br><br> -- CREATION DES MENUS (ETAPE 2 B1)
+                                <br>	INSERT into Resto.MENU (Menu_Disponible,Menu_Libelle,Menu_DateAjout,Menu_PrixTTC) values (0,'Aucun menu disponible','09/04/2015 08:00:00',0.00);
+                                <br>	-- ... [ A MODIFIER ET COMPLETER ! ]
+                                <br>	GO		
+                                <br>	-- LES MENUS SONT COMPOSÉS DE... (ETAPE 2 B2)
+                                <br>		-- ... [ A COMPLETER ! ]
+
+                                <br><br> -- GESTION DU STOCK (ETAPE 3)
+                                <br>	INSERT into Resto.STOCK (Stock_Fournisseur,Stock_DateAchat,Stock_PrixAchatUnit,Stock_QuantiteEntree,Stock_QuantiteSortie,ID_Article) values ('STOCK VIDE','03:04:2015 08:00:00',0,0,0,0,1);
+                                <br>	-- ... [ A MODIFIER ET COMPLETER ! ]
+                                <br>	GO
+
+                                <br><br> -- PREFERENCES DU CLIENTS
+                                <br>	-- CUISSON DES VIANDES
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('VIANDE','Tartate','');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('VIANDE','Bleu','');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('VIANDE','Saignant','');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('VIANDE','A point','');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('VIANDE','Bien cuit','');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('VIANDE','Griller','');
+                                <br>	-- ... [ A MODIFIER ET COMPLETER SI BESOIN EST ! ]
+                                <br>	GO
+                                <br>	-- CUISSON DES POISSONS
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('POISSON','Micro-ondes','1 à 2,5 min');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('POISSON','Vapeur','5 à 6 min');	
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('POISSON','Pocher','6 à 8 min');			
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('POISSON','Griller','3 à 4 min / coté');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('POISSON','Frire','6 à 8 min');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('POISSON','Meunière','7 à 10 min');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('POISSON','Papillote','8 à 10 min');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('POISSON','Braiser','10 min');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('POISSON','Au four','10 à 15 min');	
+                                <br>	-- ... [ A MODIFIER ET COMPLETER SI BESOIN EST ! ]
+                                <br>	GO
+                                <br>	-- CUISSON DES POISSONS
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('LEGUME','Eau','');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('LEGUME','Vapeur','');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('LEGUME','Friture','');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('LEGUME','Grillade','');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('LEGUME','Mijotée','');
+                                <br>	INSERT into Resto.PREFERENCE (Preference_Type,Preference_Libelle,Preference_Duree) values ('LEGUME','Micro-Ondes','');
+                                <br>	-- ... [ A MODIFIER ET COMPLETER SI BESOIN EST ! ]
+                                <br>	GO
+
+                                <br><br>	INSERT INTO [Resto].[CONFIGCOLOR]
+                                <br>		([ConfCol_1],[ConfFont_1],[ConfCol_2],[ConfFont_2]
+                                <br>		,[ConfCol_3],[ConfFont_3],[ConfCol_4],[ConfFont_4]
+                                <br>		,[ConfCol_5],[ConfFont_5],[ConfCol_6],[ConfFont_6]
+                                <br>		,[ConfCol_7],[ConfFont_7],[ConfCol_8],[ConfFont_8]
+                                <br>		,[ConfCol_9],[ConfFont_9],[ConfCol_10],[ConfFont_10]
+                                <br>		,[ConfCol_11],[ConfFont_11],[ConfCol_12],[ConfFont_12]
+                                <br>		,[ConfCol_13],[ConfFont_13],[ConfRandom])
+                                <br>	VALUES
+                                <br>		('-16777216','-1','-5187329','-16777216'
+                                <br>		,'-2752555','-16777216','-18283','-16777216'
+                                <br>		,'-32640','-16777216','-71','-16777216'
+                                <br>		,'-1','-16777216','-49602','-16777216'
+                                <br>		,'-11885057','-16777216','-16727808','-16777216'
+                                <br>		,'-32704','-16777216','-3037787','-16777216'
+                                <br>		,'-4144960','-16777216','false')
+                                <br>	GO
+                                <br>	--  [ NE PAS MODIFIER ! ] --
+                            </code></div></div></div>
+
+                        <h4>3 - PROCEDURES STOCKEES</h4>
+                            <div style="margin:20px; margin-top:5px"><div class="quotetitle"><b>Spoiler:</b> <input type="button" value="CLIQUEZ ICI POUR AFFICHER LES REQUETES" style="width:80%;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';        this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" /></div><div class="quotecontent"><div style="display: none;"><code>
+                                <br>USE ServeurResto
+                                <br>GO
+
+                                <br><br>-----------------------------------------------------------------
+                                <br>-- Procédures généralistes permettant la récupération de clefs -- 
+                                <br>-- (Primaire ou Etrangère), de nom de colonne dans une table,  -- 
+                                <br>-- ou encore des noms de tables !							   -- 
+                                <br>-----------------------------------------------------------------
+                                <br>-- > Compatibles toutes BDD, juste changer le nom de schema !  --
+                                <br>-----------------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[RechercherClefs] -- V1
+                                <br>@NomTable  varchar(50),
+                                <br>@TypeClef int 
+                                <br>AS
+                                <br>IF ((@TypeClef != null) OR (@TypeClef != '') OR (@TypeClef = 0))
+                                <br>	BEGIN
+                                <br>	IF ((@NomTable != null) OR (@NomTable != ''))
+                                <br>		BEGIN		 -- La clef primaire de la colonne @NomTable
+                                <br>		SELECT       kcu.COLUMN_NAME AS 'Clef primaire' 
+                                <br>		FROM         INFORMATION_SCHEMA.table_constraints tc  
+                                <br>		INNER JOIN   INFORMATION_SCHEMA.key_column_usage kcu  
+                                <br>		ON           tc.CONSTRAINT_SCHEMA = kcu.CONSTRAINT_SCHEMA  
+                                <br>		AND          tc.CONSTRAINT_NAME = kcu.CONSTRAINT_NAME  
+                                <br>		WHERE        tc.CONSTRAINT_TYPE = 'PRIMARY KEY'
+                                <br>		AND			 tc.TABLE_SCHEMA = 'Resto'			
+                                <br>		AND          tc.TABLE_NAME = @NomTable;	--EX : 'UTILISATEUR'
+                                <br>		END
+                                <br>	ELSE
+                                <br>		BEGIN		 -- Toutes les clefs primaires !
+                                <br>		SELECT       kcu.COLUMN_NAME AS 'Clefs primaires' 
+                                <br>		FROM         INFORMATION_SCHEMA.table_constraints tc  
+                                <br>		INNER JOIN   INFORMATION_SCHEMA.key_column_usage kcu
+                                <br>		ON           tc.CONSTRAINT_SCHEMA = kcu.CONSTRAINT_SCHEMA  
+                                <br>		AND          tc.CONSTRAINT_NAME = kcu.CONSTRAINT_NAME  
+                                <br>		WHERE        tc.CONSTRAINT_TYPE = 'PRIMARY KEY'
+                                <br>		AND			 tc.TABLE_SCHEMA = 'Resto';
+                                <br>		END
+                                <br>	END
+                                <br>ELSE
+                                <br>	BEGIN
+                                <br>	IF ((@NomTable != null) OR (@NomTable != ''))
+                                <br>		BEGIN		 -- Les clefs etrangeres de la colonne @NomTable
+                                <br>		SELECT       kcu.COLUMN_NAME AS "Clefs etrangeres" 
+                                <br>		FROM         INFORMATION_SCHEMA.table_constraints tc  
+                                <br>		INNER JOIN   INFORMATION_SCHEMA.key_column_usage kcu  
+                                <br>		ON           tc.CONSTRAINT_SCHEMA = kcu.CONSTRAINT_SCHEMA  
+                                <br>		AND          tc.CONSTRAINT_NAME = kcu.CONSTRAINT_NAME  
+                                <br>		WHERE        tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+                                <br>		AND			 tc.TABLE_SCHEMA = 'Resto'			
+                                <br>		AND          tc.TABLE_NAME = @NomTable;	
+                                <br>		END
+                                <br>	ELSE
+                                <br>		BEGIN		 -- Toutes les clefs etrangeres !
+                                <br>		SELECT       kcu.COLUMN_NAME AS "Clef etrangere" 
+                                <br>		FROM         INFORMATION_SCHEMA.table_constraints tc  
+                                <br>		INNER JOIN   INFORMATION_SCHEMA.key_column_usage kcu  
+                                <br>		ON           tc.CONSTRAINT_SCHEMA = kcu.CONSTRAINT_SCHEMA  
+                                <br>		AND          tc.CONSTRAINT_NAME = kcu.CONSTRAINT_NAME  
+                                <br>		WHERE        tc.CONSTRAINT_TYPE = 'FOREIGN KEY'
+                                <br>		AND			 tc.TABLE_SCHEMA = 'Resto';
+                                <br>		END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>CREATE PROCEDURE [Resto].[RechercherColonnes] -- v1
+                                <br>@NomColonne  varchar(50),
+                                <br>@TypeColonne int 
+                                <br>as
+                                <br>IF ((@NomColonne != null) OR (@NomColonne != ''))
+                                <br>	BEGIN
+                                <br>	IF (@TypeColonne = 0)
+                                <br>		BEGIN		-- La Colonne
+                                <br>		SELECT		COLONNES.name AS 'Colonne'
+                                <br>		FROM		dbo.syscolumns AS COLONNES
+                                <br>		INNER JOIN	dbo.systypes AS TYPES ON TYPES.xtype = COLONNES.xtype
+                                <br>		INNER JOIN	dbo.sysobjects AS TABLES ON TABLES.ID = COLONNES.ID
+                                <br>		WHERE 		TABLES.xtype = 'U' 
+                                <br>		AND			TABLES.name = @NomColonne;	--EX : 'UTILISATEUR'
+                                <br>		END
+                                <br>	ELSE
+                                <br>		BEGIN		-- La Colonne + son Type
+                                <br>		SELECT		COLONNES.name AS 'Colonne', TYPES.name AS 'Type'
+                                <br>		FROM		dbo.syscolumns AS COLONNES
+                                <br>		INNER JOIN	dbo.systypes AS TYPES ON TYPES.xtype = COLONNES.xtype
+                                <br>		INNER JOIN	dbo.sysobjects AS TABLES ON TABLES.ID = COLONNES.ID
+                                <br>		WHERE 		TABLES.xtype = 'U' 
+                                <br>		AND			TABLES.name = @NomColonne;
+                                <br>		END
+                                <br>	END
+                                <br>ELSE				-- SINON ON AFFICHE TOUTES LES TABLES ET LEURS COLONNES
+                                <br>	BEGIN
+                                <br>	IF (@TypeColonne = 0)
+                                <br>		BEGIN		-- Les Tables +	leurs Colonnes	
+                                <br>		SELECT 		TABLES.name AS 'Table', COLONNES.name AS 'Colonne'
+                                <br>		FROM		dbo.syscolumns AS COLONNES
+                                <br>		INNER JOIN 	dbo.sysobjects AS TABLES ON TABLES.ID = COLONNES.ID
+                                <br>		INNER JOIN 	dbo.systypes AS TYPES ON TYPES.xtype = COLONNES.xtype
+                                <br>		WHERE 		TABLES.xtype = 'U'
+                                <br>		ORDER BY	TABLES.name;
+                                <br>		END
+                                <br>	ELSE
+                                <br>		BEGIN		-- Les Tables +	leurs Colonnes + le Type de données de chaque colonnes
+                                <br>		SELECT 		TABLES.name AS 'Table', COLONNES.name AS 'Colonne', TYPES.name AS 'Type'
+                                <br>		FROM		dbo.syscolumns AS COLONNES
+                                <br>		INNER JOIN 	dbo.sysobjects AS TABLES ON TABLES.ID = COLONNES.ID
+                                <br>		INNER JOIN 	dbo.systypes AS TYPES ON TYPES.xtype = COLONNES.xtype
+                                <br>		WHERE 		TABLES.xtype = 'U'
+                                <br>		ORDER BY	TABLES.name;
+                                <br>		END
+                                <br>	END
+                                <br>GO
+
+                                <br>CREATE PROCEDURE [Resto].[RechercherTables] -- v1
+                                <br>as
+                                <br>	BEGIN
+                                <br>		SELECT 		TABLES.name AS "Tables"
+                                <br>		FROM		dbo.sysobjects AS TABLES
+                                <br>		WHERE 		TABLES.xtype = 'U'
+                                <br>		ORDER BY	TABLES.name;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>-------------------------------------------------------
+                                <br>-- Procédure pour l'authentification à l'application --
+                                <br>-------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Authentification] -- V1
+                                <br>@pseudo varchar(50),
+                                <br>@password varchar(50)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT ID_User, User_Pseudo, User_Password,User_NomReel, User_PrenomReel, Role_NiveauDroits
+                                <br>		FROM Resto.UTILISATEUR U
+                                <br>		INNER JOIN Resto.ROLE R on U.ID_Role = R.ID_Role
+                                <br>		WHERE User_Pseudo = @pseudo
+                                <br>		AND User_Password = @password;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>------------------------------------------------
+                                <br>-- Procédure d'affichage pour le DataGridView --
+                                <br>------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Affichage_DataGridView] -- V1
+                                <br>as
+                                <br>	SELECT [User_Pseudo]as 'Pseudo',[User_Password] as 'Mot de Passe',[User_NomReel] as 'Nom',[User_PrenomReel] as 'Prénom', [User_Telephone] as 'N° téléphone',[Role_Libelle] as 'Rôle'
+                                <br>	FROM Resto.UTILISATEUR U
+                                <br>	INNER JOIN Resto.ROLE R on U.ID_Role = R.ID_Role
+                                <br>	WHERE [Role_NiveauDroits] Between 1 AND 3;
+                                <br>GO
+
+                                <br><br>ALTER procedure [Resto].[Affichage_DataGridView] -- V2
+                                <br>	@Table		varchar(50)			--(TABLE)
+                                <br>AS
+                                <br>	DECLARE @SQL VARCHAR(255) ;
+                                <br>	BEGIN
+                                <br>		IF(@Table = NULL) --(REQUETE INVALIDE)
+                                <br>			BEGIN
+                                <br>				ROLLBACK
+                                <br>		END
+                                <br>		ELSE
+                                <br>			BEGIN
+                                <br>			SET @SQL = 'SELECT * FROM [Resto].['+ @Table +'] ;';
+                                <br>			EXEC (@SQL) ;
+                                <br>		END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>----------------------------------------------------------------
+                                <br>-- Procédure de recherche pour le DGV à partir du CU_Recheche --
+                                <br>----------------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Rechercher] -- V1
+                                <br>	@Table		varchar(50),			--(TABLE : le label invisible)
+                                <br>	@Attribut	varchar(50),			--(COMBOBOX : pseudo, nom, prenom, carte, menu, etc...)
+                                <br>	@Recherche	varchar(50)				--(TEXTBOX : la recherche)
+                                <br>AS
+                                <br>	DECLARE @SQL VARCHAR(255) ;
+                                <br>	BEGIN
+                                <br>		IF(@Recherche = NULL OR @Attribut = NULL OR @Table = NULL) --(REQUETE INVALIDE)
+                                <br>			BEGIN
+                                <br>				ROLLBACK
+                                <br>			END
+                                <br>		ELSE
+                                <br>			BEGIN
+                                <br>				SET @SQL = 'SELECT * FROM [Resto].['+ @Table +'] WHERE '+ @Attribut +' LIKE ''%' + @Recherche + '%'';';
+                                <br>				EXEC (@SQL) ;
+                                <br>			END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>---------------------------------------------------------------------------------
+                                <br>-- Procédure d'affichage dans les TextBox à partir d'une sélection dans le DGV --
+                                <br>---------------------------------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[SelectLineDGV] -- V1
+                                <br>	@Table		varchar(50),			--(TABLE : le label invisible)
+                                <br>	@Attribut	varchar(50),			--(COMBOBOX : pseudo, nom, prenom, carte, menu, etc...)
+                                <br>	@Recherche	varchar(50)				--(TEXTBOX : la recherche)
+                                <br>AS
+                                <br>	DECLARE @SQL VARCHAR(255) ;
+                                <br>	BEGIN
+                                <br>        IF(@Recherche = NULL OR @Attribut = NULL OR @Table = NULL) --(REQUETE INVALIDE)
+                                <br>			BEGIN
+                                <br>				ROLLBACK
+                                <br>			END
+                                <br>		ELSE
+                                <br>			BEGIN
+                                <br>				SET @SQL = 'SELECT * FROM [Resto].['+ @Table +'] WHERE '+ @Attribut +' = ''' + @Recherche + ''';';
+                                <br>				EXEC (@SQL);
+                                <br>			END
+                                <br>	END
+                                <br>GO
+
+                                <br><br><br><br>---------------------------------------
+                                <br>PARTIE SERVEUR - Creation des boutons -
+                                <br>---------------------------------------------------------------------------------------
+                                <br>-- Procédure permettant la selection de la catégorie d'articles disponibles demandée --
+                                <br>---------------------------------------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[ArticlesDisponibles] -- V2
+                                <br>	@Button		int, --varchar(50)				-- (Nom du Boutton)
+                                <br>	@Critere	int
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		IF(@Button = NULL) 						--(REQUETE INVALIDE)
+                                <br>			BEGIN
+                                <br>				ROLLBACK
+                                <br>			END
+                                <br>		ELSE
+                                <br>			BEGIN
+                                <br>				IF (@Button = 0) -- BOISSONS	
+                                <br>					SELECT * FROM [Resto].[CARTE] WHERE ID_Type = @Critere AND Article_Disponible = 1;
+                                <br>				IF (@Button = 1) -- CARTE	
+                                <br>					SELECT * FROM [Resto].[CARTE] WHERE ID_Type != @Critere AND ID_Type != 1 AND Article_Disponible = 1;
+                                <br>				IF (@Button = 2) -- TOUT LES MENUS
+                                <br>				BEGIN		
+                                <br>					SELECT M.ID_Menu, Menu_Disponible, Menu_Libelle, Menu_DateAjout, Menu_PrixTTC FROM MENU M 
+                                <br>					WHERE Menu_Disponible = 1;
+                                <br>				END
+                                <br>				IF (@Button = 3) -- MENU UNIQUE (UN SEUL MENU DISPO)
+                                <br>				BEGIN		
+                                <br>					SELECT * FROM MENU M 
+                                <br>					INNER JOIN Resto.REL_Composer C ON M.ID_Menu = C.ID_Menu 
+                                <br>					INNER JOIN Resto.CARTE A ON C.ID_Article = A.ID_Article
+                                <br>					WHERE Menu_Disponible = 1
+                                <br>					ORDER BY C.Composer_Type;
+                                <br>				END
+                                <br>				IF (@Button = 4) -- MENU CIBLE (PLUSIEURS MENUS DISPO)
+                                <br>				BEGIN		
+                                <br>					SELECT * FROM MENU M 
+                                <br>					INNER JOIN Resto.REL_Composer C ON M.ID_Menu = C.ID_Menu 
+                                <br>					INNER JOIN Resto.CARTE A ON C.ID_Article = A.ID_Article
+                                <br>					WHERE Menu_Disponible = 1 AND M.ID_Menu = @Critere
+                                <br>					ORDER BY C.Composer_Type;
+                                <br>				END
+                                <br>			END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>----------------------------------------------------
+                                <br>-- Compte le nombre de menu des menus disponibles --
+                                <br>----------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[MenusDispoCount] -- V1
+                                <br>AS 
+                                <br>	BEGIN
+                                <br>		SELECT COUNT(*) FROM MENU WHERE Menu_Disponible = 1; 
+                                <br>	END
+                                <br>GO
+
+                                <br><br>---------------------------------------------------
+                                <br>-- Récupère le 1er du menu des menus disponibles --
+                                <br>---------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[MenusDispoLibelle] -- V1
+                                <br>AS 
+                                <br>	BEGIN
+                                <br>		SELECT TOP 1 ID_Menu, Menu_Libelle FROM MENU WHERE Menu_Disponible = 1; 
+                                <br>	END
+                                <br>GO
+
+                                <br><br>CREATE PROCEDURE [Resto].[Color_Insert] -- V1
+                                <br>  @ConfCol_1	VARCHAR (50), @ConfFont_1	VARCHAR (50)
+                                <br>, @ConfCol_2	VARCHAR (50), @ConfFont_2	VARCHAR (50)
+                                <br>, @ConfCol_3	VARCHAR (50), @ConfFont_3	VARCHAR (50)
+                                <br>, @ConfCol_4	VARCHAR (50), @ConfFont_4	VARCHAR (50)
+                                <br>, @ConfCol_5	VARCHAR (50), @ConfFont_5	VARCHAR (50)
+                                <br>, @ConfCol_6	VARCHAR (50), @ConfFont_6	VARCHAR (50)
+                                <br>, @ConfCol_7	VARCHAR (50), @ConfFont_7	VARCHAR (50)
+                                <br>, @ConfCol_8	VARCHAR (50), @ConfFont_8	VARCHAR (50)
+                                <br>, @ConfCol_9	VARCHAR (50), @ConfFont_9	VARCHAR (50)
+                                <br>, @ConfCol_10	VARCHAR (50), @ConfFont_10	VARCHAR (50)
+                                <br>, @ConfCol_11	VARCHAR (50), @ConfFont_11	VARCHAR (50)
+                                <br>, @ConfCol_12	VARCHAR (50), @ConfFont_12	VARCHAR (50)
+                                <br>, @ConfCol_13	VARCHAR (50), @ConfFont_13	VARCHAR (50)
+                                <br>, @Random		VARCHAR (50)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		IF EXISTS (SELECT ID_ConfCol FROM [Resto].[CONFIGCOLOR] WHERE ID_ConfCol = '1')
+                                <br>		BEGIN
+                                <br>			UPDATE [Resto].[CONFIGCOLOR] 
+                                <br>			SET
+                                <br>			ConfCol_1  = @ConfCol_1 , ConfFont_1  = @ConfFont_1, 
+                                <br>			ConfCol_2  = @ConfCol_2 , ConfFont_2  = @ConfFont_2, 
+                                <br>			ConfCol_3  = @ConfCol_3 , ConfFont_3  = @ConfFont_3, 
+                                <br>			ConfCol_4  = @ConfCol_4 , ConfFont_4  = @ConfFont_4, 
+                                <br>			ConfCol_5  = @ConfCol_5 , ConfFont_5  = @ConfFont_5, 
+                                <br>			ConfCol_6  = @ConfCol_6 , ConfFont_6  = @ConfFont_6, 
+                                <br>			ConfCol_7  = @ConfCol_7 , ConfFont_7  = @ConfFont_7, 
+                                <br>			ConfCol_8  = @ConfCol_8 , ConfFont_8  = @ConfFont_8, 
+                                <br>			ConfCol_9  = @ConfCol_9 , ConfFont_9  = @ConfFont_9, 
+                                <br>			ConfCol_10 = @ConfCol_10, ConfFont_10 = @ConfFont_10, 
+                                <br>			ConfCol_11 = @ConfCol_11, ConfFont_11 = @ConfFont_11, 
+                                <br>			ConfCol_12 = @ConfCol_12, ConfFont_12 = @ConfFont_12, 
+                                <br>			ConfCol_13 = @ConfCol_13, ConfFont_13 = @ConfFont_13,
+                                <br>			ConfRandom = @Random
+                                <br>			WHERE [ID_ConfCol] = 1;
+                                <br>		END
+                                <br>		ELSE
+                                <br>		BEGIN
+                                <br>			DBCC CHECKIDENT ('Resto.CONFIGCOLOR', RESEED, 0);
+                                <br>			INSERT INTO [Resto].[CONFIGCOLOR]
+                                <br>           ([ConfCol_1],[ConfFont_1],[ConfCol_2],[ConfFont_2]
+                                <br>           ,[ConfCol_3],[ConfFont_3],[ConfCol_4],[ConfFont_4]
+                                <br>           ,[ConfCol_5],[ConfFont_5],[ConfCol_6],[ConfFont_6]
+                                <br>           ,[ConfCol_7],[ConfFont_7],[ConfCol_8],[ConfFont_8]
+                                <br>           ,[ConfCol_9],[ConfFont_9],[ConfCol_10],[ConfFont_10]
+                                <br>           ,[ConfCol_11],[ConfFont_11],[ConfCol_12],[ConfFont_12]
+                                <br>           ,[ConfCol_13],[ConfFont_13], [ConfRandom])
+                                <br>			VALUES
+                                <br>		   (@ConfCol_1 , @ConfFont_1, @ConfCol_2 , @ConfFont_2, 
+                                <br>			@ConfCol_3 , @ConfFont_3, @ConfCol_4 , @ConfFont_4, 
+                                <br>			@ConfCol_5 , @ConfFont_5, @ConfCol_6 , @ConfFont_6, 
+                                <br>			@ConfCol_7 , @ConfFont_7, @ConfCol_8 , @ConfFont_8, 
+                                <br>			@ConfCol_9 , @ConfFont_9, @ConfCol_10, @ConfFont_10, 
+                                <br>			@ConfCol_11, @ConfFont_11, @ConfCol_12, @ConfFont_12, 
+                                <br>			@ConfCol_13, @ConfFont_13, @Random);
+                                <br>		END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>----------------------------------------------------------------
+                                <br>-------------- Partie Admin - Gestion Utilisateur --------------
+                                <br>----------------------------------------------------------------
+                                <br>		  -- Procédure d'insertion d'un utilisateur --
+                                <br>		  --------------------------------------------
+
+                                <br><br>CREATE procedure [Resto].[Utilisateur_Insert] -- V1
+                                <br>@pseudo varchar(50),
+                                <br>@pass varchar(50),
+                                <br>@nom varchar(50),
+                                <br>@prenom varchar(50),
+                                <br>@tel char(10) = null,
+                                <br>@role varchar(50)
+                                <br>AS
+                                <br>	Insert into [Resto].[UTILISATEUR](User_Pseudo, User_Password, User_NomReel, User_PrenomReel, User_Telephone, ID_Role)
+                                <br>	values (@pseudo, @pass, @nom, @prenom, @tel, @role);
+                                <br>GO
+
+                                <br><br>ALTER PROCEDURE [Resto].[Utilisateur_Insert] -- V2
+                                <br>@pseudo varchar(50),
+                                <br>@pass varchar(50),
+                                <br>@nom varchar(50),
+                                <br>@prenom varchar(50),
+                                <br>@tel char(10) = null,
+                                <br>@role varchar(50)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		INSERT INTO [Resto].[UTILISATEUR](User_Pseudo, User_Password, User_NomReel, User_PrenomReel, User_Telephone, ID_Role)
+                                <br>		VALUES (@pseudo, @pass, @nom, @prenom, @tel, (SELECT ID_Role FROM Resto.ROLE WHERE Role_Libelle = ''+@role+''));
+                                <br>	END
+                                <br>GO
+
+                                <br><br>------------------------------------------------
+                                <br>-- Procédure de modification d'un utilisateur --
+                                <br>------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Utilisateur_Update]  -- V1
+                                <br>@id int,@pseudo varchar(50), 
+                                <br>@pass varchar(50),@nom varchar(50), 
+                                <br>@prenom varchar(50),@tel char(10), 
+                                <br>@role varchar(50)
+                                <br>AS
+                                <br>	update [Resto].[UTILISATEUR] SET
+                                <br>		User_Pseudo = @pseudo, User_Password = @pass, 
+                                <br>		User_NomReel = @nom, User_PrenomReel = @prenom, 
+                                <br>		User_Telephone = @tel, ID_Role = @role
+                                <br>	where
+                                <br>		ID_User = @id;
+                                <br>GO
+
+                                <br>ALTER PROCEDURE [Resto].[Utilisateur_Update] -- V2
+                                <br>@id int,@pseudo varchar(50), 
+                                <br>@pass varchar(50),@nom varchar(50), 
+                                <br>@prenom varchar(50),@tel char(10), 
+                                <br>@role varchar(50)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		UPDATE [Resto].[UTILISATEUR] SET
+                                <br>			User_Pseudo = @pseudo, User_Password = @pass, 
+                                <br>			User_NomReel = @nom, User_PrenomReel = @prenom, 
+                                <br>			User_Telephone = @tel, ID_Role = (SELECT ID_Role FROM Resto.ROLE WHERE Role_Libelle = ''+@role+'')
+                                <br>		WHERE
+                                <br>			ID_User = @id;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>-------------------------------------
+                                <br>-- Procédure d'affichage d'un Role --
+                                <br>-------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Role_Affichage] -- V1
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT *
+                                <br>		FROM Resto.ROLE;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>ALTER PROCEDURE [Resto].[Role_Affichage] -- V2
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT *
+                                <br>		FROM Resto.ROLE
+                                <br>		ORDER BY 3;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>-------------------------------------
+                                <br>-- Procédure d'insertion d'un Role --
+                                <br>-------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Role_Insert] -- V1
+                                <br>@libelle varchar(50),
+                                <br>@niveau varchar (3)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		INSERT INTO [Resto].[ROLE](Role_Libelle, Role_NiveauDroits)
+                                <br>		VALUES (@libelle,@niveau);
+                                <br>	END
+                                <br>GO
+
+                                <br><br>-----------------------------------------
+                                <br>-- Procédure de modification d'un Role --
+                                <br>-----------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Role_Update] -- V1
+                                <br>@id varchar (3),
+                                <br>@libelle varchar(50),
+                                <br>@niveau varchar (3)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		UPDATE [Resto].[ROLE] SET
+                                <br>			Role_Libelle = @libelle,
+                                <br>			Role_NiveauDroits = @niveau
+                                <br>		WHERE
+                                <br>			ID_Role = @id;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>-----------------------------------------------------------------
+                                <br>-------------- Partie Admin - Gestion des commande --------------
+                                <br>-----------------------------------------------------------------
+                                <br>			   -- Affichage pour le DataGridView --
+                                <br>			   ------------------------------------
+
+                                <br><br>CREATE procedure [Resto].[Affichage_DGV_RELCommander] -- V1
+                                <br>	@Date		Datetime,			--(TABLE)
+                                <br>	@Valeur		int
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		IF(@Date = NULL OR @Valeur = NULL) --(REQUETE INVALIDE)
+                                <br>			BEGIN
+                                <br>				ROLLBACK
+                                <br>			END
+                                <br>		ELSE
+                                <br>			BEGIN
+                                <br>			IF (@Valeur = 0)
+                                <br>				BEGIN
+                                <br>					SELECT C.ID_Facture, U.User_Pseudo, F.Facture_DateCrea, F.Facture_Validee, 
+                                <br>						F.Facture_Cloturee, F.Facture_Modifiee, C.ID_Article, A.Article_Nom, 
+                                <br>						C.ID_Menu, C.Nbr_Article, C.Preference_Type, C.Voir_Serveur, 
+                                <br>						C.Article_offert, A.Article_PrixHT
+                                <br>						FROM [Resto].[REL_Commander] C
+                                <br>						INNER JOIN [Resto].[CARTE] A ON C.ID_Article = A.ID_Article
+                                <br>						INNER JOIN [Resto].[FACTURE] F ON C.ID_Facture = F.ID_Facture
+                                <br>						INNER JOIN [Resto].[UTILISATEUR] U ON F.ID_User = U.ID_User
+                                <br>						WHERE F.Facture_DateCrea BETWEEN ''+@Date-1+' 00:00:00' AND ''+@Date+' 23:59:59'
+                                <br>						ORDER BY C.ID_Facture DESC;
+                                <br>				END
+                                <br>			ELSE
+                                <br>				BEGIN
+                                <br>					SELECT C.ID_Facture, U.User_Pseudo, F.Facture_DateCrea, F.Facture_Validee, 
+                                <br>						F.Facture_Cloturee, F.Facture_Modifiee, C.ID_Article, A.Article_Nom, 
+                                <br>						C.ID_Menu, C.Nbr_Article, C.Preference_Type, C.Voir_Serveur, 
+                                <br>						C.Article_offert, A.Article_PrixHT
+                                <br>						FROM [Resto].[REL_Commander] C
+                                <br>						INNER JOIN [Resto].[CARTE] A ON C.ID_Article = A.ID_Article
+                                <br>						INNER JOIN [Resto].[FACTURE] F ON C.ID_Facture = F.ID_Facture
+                                <br>						INNER JOIN [Resto].[UTILISATEUR] U ON F.ID_User = U.ID_User
+                                <br>						WHERE C.ID_Facture = @Valeur
+                                <br>						ORDER BY C.ID_Facture DESC ;
+                                <br>				END
+                                <br>			END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>------------------------------------------------
+                                <br>-- Affiche les articles commandés dans le DGV --
+                                <br>------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Commander_Recherche] -- v1
+                                <br>@idFacture int
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT ID_Facture, ID_Menu, C.ID_Article, Nbr_Article, Preference_Type, Voir_Serveur, Article_offert, [Article_Nom], [Article_PrixHT]
+                                <br>		FROM [Resto].[REL_Commander] C
+                                <br>		INNER JOIN [Resto].[CARTE] A ON C.ID_Article = A.ID_Article
+                                <br>		WHERE ID_Facture = @idFacture;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>ALTER PROCEDURE [Resto].[Commander_Recherche] -- v2
+                                <br>@idFacture int
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT [ID_Facture], C.[ID_Menu], [Menu_Libelle], C.[ID_Article], [Nbr_Article], [Preference_Type], [Voir_Serveur], [Article_offert], [Article_Nom], [Article_PrixHT], [ID_Type], [TVA_Taux], [Menu_PrixTTC]
+                                <br>		FROM [Resto].[REL_Commander] C
+                                <br>		INNER JOIN [Resto].[CARTE] A ON C.ID_Article = A.ID_Article
+                                <br>		INNER JOIN [Resto].[MENU] M ON C.ID_Menu = M.ID_Menu
+                                <br>		INNER JOIN [Resto].[TVA] T ON A.ID_TVA = T.ID_TVA
+                                <br>		WHERE ID_Facture = @idFacture
+                                <br>		ORDER BY ID_Menu,C.ID_Article;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>CREATE PROCEDURE [Resto].[Commander_Select] -- v1
+                                <br>@Valeur int
+                                <br>AS
+                                <br>	DECLARE @SQL VARCHAR(255) ;
+                                <br>	BEGIN
+                                <br>		IF(@Valeur = NULL) --(REQUETE INVALIDE)
+                                <br>			BEGIN
+                                <br>				ROLLBACK
+                                <br>			END
+                                <br>		ELSE
+                                <br>			BEGIN
+                                <br>				SELECT 
+                                <br>				F.ID_Facture, U.User_Pseudo, F.Facture_TableNum, F.Facture_NbrCouvert, 
+                                <br>				F.Facture_DateCrea, F.Facture_Modifiee, F.Facture_DateModif,		
+                                <br>				SUM(C.Nbr_Article), COUNT(DISTINCT(C.ID_Menu)), F.Facture_PrixTotalTTC,
+                                <br>				F.Facture_Validee, F.Facture_Cloturee						
+                                <br>				FROM [Resto].REL_Commander C
+                                <br>				INNER JOIN [Resto].[FACTURE] F ON C.ID_Facture = F.ID_Facture
+                                <br>				INNER JOIN [Resto].[UTILISATEUR] U ON F.ID_User = U.ID_User
+                                <br>				WHERE C.ID_Facture = @Valeur
+                                <br>				GROUP BY F.ID_Facture, U.User_Pseudo, F.Facture_TableNum, F.Facture_NbrCouvert, 
+                                <br>				F.Facture_DateCrea, F.Facture_Modifiee, F.Facture_DateModif, 		
+                                <br>				F.Facture_PrixTotalTTC, F.Facture_Validee, F.Facture_Cloturee;
+                                <br>			END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>-----------------------------------------------
+                                <br>-- Modifie une facture par l'interface admin --
+                                <br>-----------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Commander_UpdateFac] -- v2
+                                <br>@idFacture int,
+                                <br>@NumTable int,
+                                <br>@NbrCouverts int,
+                                <br>@DateModif datetime,
+                                <br>@Valid varchar(10),
+                                <br>@Clot varchar(10)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		UPDATE [Resto].[FACTURE] SET
+                                <br>		Facture_TableNum = @NumTable,
+                                <br>		Facture_NbrCouvert = @NbrCouverts,
+                                <br>		Facture_DateModif = @DateModif,
+                                <br>		Facture_Modifiee = 1,
+                                <br>		Facture_Validee = @Valid,
+                                <br>		Facture_Cloturee = @Clot
+                                <br>		WHERE ID_Facture = @idFacture;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>CREATE PROCEDURE [Resto].[Commander_SelectNumber] -- v1
+                                <br>@Valeur int
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		IF(@Valeur = NULL) --(REQUETE INVALIDE)
+                                <br>			BEGIN
+                                <br>				ROLLBACK
+                                <br>			END
+                                <br>		ELSE
+                                <br>			BEGIN
+                                <br>				SELECT SUM(C.Nbr_Article) AS Nbr_Article, COUNT(DISTINCT(C.ID_Menu)) AS ID_Menu
+                                <br>				FROM [Resto].REL_Commander C
+                                <br>				WHERE C.ID_Facture = @Valeur;
+                                <br>			END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>----------------------------------------------------------------
+                                <br>-------------- Partie Admin - Gestion de la Carte --------------
+                                <br>----------------------------------------------------------------
+                                <br>	-- Affichage pour la combobox TVA la liste de la TVA --
+                                <br>	-------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[TVA_affichage] -- V1
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT * FROM Resto.TVA;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>----------------------------------------------------------
+                                <br>-- Affichage pour la combobox TYPEPRODUIT pour sa liste --
+                                <br>----------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[TYPE_affichage] -- V1
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT * FROM Resto.TYPEPRODUIT;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>----------------------------------------------------
+                                <br>-- Procédure d'insertion d'un article de la carte --
+                                <br>----------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Carte_Insert] -- V1
+                                <br>@dispo varchar(10),@nom varchar (50),
+                                <br>@format varchar(250),@prix varchar(10),
+                                <br>@supplement varchar(10),@preference varchar(10),
+                                <br>@alcool varchar(10),@image varchar(255) =null,
+                                <br>@qteStock int,@type varchar(50),
+                                <br>@tva varchar(10)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		INSERT INTO [Resto].[CARTE](Article_Disponible,Article_Nom,Article_Format,Article_PrixHT,Article_Supplement,Article_Preference,Article_Alcoolise,Article_ImageURL,Article_QuantiteEnStock,ID_Type,ID_Tva)
+                                <br>		VALUES (@dispo,@nom,@format,@prix,@supplement,@preference,@alcool,@image,@qteStock,(SELECT ID_Type FROM Resto.TYPEPRODUIT WHERE Type_Libelle = @type),(SELECT ID_TVA FROM Resto.TVA WHERE TVA_taux = @tva));
+                                <br>	END
+                                <br>GO
+
+                                <br><br>-----------------------------------------------------
+                                <br>-- Procédure de modification d'un article de Carte --
+                                <br>-----------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Carte_Update] -- V1
+                                <br>@id int, @dispo varchar(10),
+                                <br>@nom varchar (50),@format varchar(250),
+                                <br>@prix float, @supplement varchar(10),
+                                <br>@preference varchar(10),@alcool varchar(10),
+                                <br>@image varchar(255) = null,@qteStock int,
+                                <br>@type varchar(50),@tva varchar(10)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		UPDATE [Resto].[CARTE] SET
+                                <br>			Article_Disponible=@dispo,
+                                <br>			Article_Nom=@nom,Article_Format=@format,
+                                <br>			Article_PrixHT=@prix,
+                                <br>			Article_Supplement=@supplement,
+                                <br>			Article_Preference=@preference,
+                                <br>			Article_Alcoolise=@alcool,
+                                <br>			Article_ImageURL=@image,
+                                <br>			Article_QuantiteEnStock=@qteStock,
+                                <br>			ID_Type=(SELECT ID_Type FROM Resto.TYPEPRODUIT WHERE Type_Libelle = @type),
+                                <br>			ID_Tva=(SELECT ID_TVA FROM Resto.TVA WHERE TVA_taux = @tva)
+                                <br>		WHERE 
+                                <br>			ID_Article=@id;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>--------------------------------------------------------------
+                                <br>-------------- Partie Admin - Gestion des menus --------------
+                                <br>--------------------------------------------------------------
+                                <br>			-- Procédure d'insertion d'un menu --
+                                <br>			-------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Menu_Insert] -- V1
+                                <br>@dispo varchar(10),
+                                <br>@libelle varchar (100),
+                                <br>@date varchar (20),
+                                <br>@prix float
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		INSERT INTO [Resto].[MENU](Menu_Disponible, Menu_Libelle,Menu_DateAjout,Menu_PrixTTC)
+                                <br>		VALUES (@dispo,@libelle,@date,@prix);
+                                <br>	END
+                                <br>GO
+
+                                <br><br>-----------------------------------------------------
+                                <br>-- Procédure de modification d'un article de Carte --
+                                <br>-----------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Menu_Update] -- V1
+                                <br>@id int,
+                                <br>@dispo varchar(10),
+                                <br>@libelle varchar (100),
+                                <br>@date varchar (20),
+                                <br>@prix float
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		UPDATE [Resto].[MENU] SET
+                                <br>			Menu_Disponible = @dispo,
+                                <br>			Menu_Libelle = @libelle,
+                                <br>			Menu_DateAjout = @date,
+                                <br>			Menu_PrixTTC = @prix
+                                <br>		WHERE
+                                <br>			ID_Menu = @id;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>--------------------------------------------------------------
+                                <br>-- Procédure d'affichage des articles d'un Menu dans le DGV --
+                                <br>--------------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Composer_Affichage] -- V1
+                                <br>@LibelleMenu varchar(50)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT M.ID_Menu AS 'N° Menu', Menu_Libelle AS 'Nom Menu', Menu_PrixTTC AS 'Prix TTC Menu', Article_Nom AS 'Nom Article', Article_PrixHT AS 'Prix HT Article', Article_Disponible AS 'Article Disponible'
+                                <br>		FROM MENU M
+                                <br>		INNER JOIN Resto.REL_Composer C ON M.ID_Menu = C.ID_Menu
+                                <br>		INNER JOIN Resto.CARTE A ON C.ID_Article = A.ID_Article
+                                <br>		WHERE Menu_Libelle = @LibelleMenu
+                                <br>		ORDER BY Composer_Type;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>CREATE PROCEDURE [Resto].[Composer_AffichageArticle] -- V1
+                                <br>@idArticle int
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT [ID_Article],[Article_Nom],[Article_PrixHT],[Type_Libelle]
+                                <br>		FROM [Resto].[CARTE] C
+                                <br>		INNER JOIN [Resto].[TYPEPRODUIT] P ON c.ID_Type = P.ID_Type
+                                <br>		WHERE C.ID_Type != 2
+                                <br>		AND ID_Article = @idArticle;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>----------------------------------------------
+                                <br>-- Procédure d'ajout d'un article à un Menu --
+                                <br>----------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Composer_Insert] -- V1
+                                <br>@LibelleMenu varchar(100),
+                                <br>@LibelleArticle varchar(50),
+                                <br>@libelleType varchar (10)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		INSERT INTO [Resto].[REL_Composer]([ID_Menu], [ID_Article], [Composer_Type])
+                                <br>		VALUES 
+                                <br>			(
+                                <br>				(SELECT ID_Menu FROM Resto.MENU WHERE Menu_Libelle = @LibelleMenu),
+                                <br>				(SELECT ID_Article FROM Resto.CARTE WHERE Article_Nom = @LibelleArticle),
+                                <br>				@libelleType
+                                <br>			);
+                                <br>	END
+                                <br>GO
+
+                                <br><br>ALTER PROCEDURE [Resto].[Composer_Insert] -- V2
+                                <br>@idMenu varchar(100),
+                                <br>@idArticle int,
+                                <br>@libelleType varchar (10)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		INSERT INTO [Resto].[REL_Composer]([ID_Menu], [ID_Article], [Composer_Type])
+                                <br>		VALUES (@idMenu, @idArticle, @libelleType);
+                                <br>	END
+                                <br>GO
+
+                                <br><br>-----------------------------------------------------
+                                <br>-- Procédure de suppression d'un article à un Menu --
+                                <br>-----------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Composer_Delete] -- V1
+                                <br>@LibelleMenu varchar(100),
+                                <br>@LibelleArticle varchar(50)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		DELETE FROM [Resto].[REL_Composer]
+                                <br>		WHERE 
+                                <br>			[ID_Menu] = (SELECT ID_Menu FROM Resto.MENU WHERE Menu_Libelle = @LibelleMenu) 
+                                <br>			AND 
+                                <br>			[ID_Article] = (SELECT ID_Article FROM Resto.CARTE WHERE Article_Nom = @LibelleArticle);
+                                <br>	END
+                                <br>GO
+
+                                <br><br>ALTER PROCEDURE [Resto].[Composer_Delete] -- V2
+                                <br>@idMenu varchar(100),
+                                <br>@idArticle varchar(50)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		DELETE FROM [Resto].[REL_Composer]
+                                <br>		WHERE 
+                                <br>			[ID_Menu] = @idMenu
+                                <br>		AND 
+                                <br>			[ID_Article] = @idArticle;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>-----------------------------------------------------------
+                                <br>-- Procédure de comptage de ligne d'un article à un Menu --
+                                <br>-----------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Composer_Comptage] -- V1
+                                <br>@LibelleMenu varchar(100),
+                                <br>@LibelleArticle varchar(50)
+                                <br>AS
+                                <br>	DECLARE @SQL VARCHAR(255);
+                                <br>	BEGIN
+                                <br>		SET @SQL = 'SELECT *
+                                <br>		FROM [Resto].[REL_Composer]
+                                <br>		WHERE 			
+                                <br>			[ID_Menu] IN (SELECT ID_Menu FROM Resto.MENU WHERE Menu_Libelle = '''+@LibelleMenu+''')
+                                <br>		AND
+                                <br>			[ID_Article] IN (SELECT ID_Article FROM Resto.CARTE WHERE Article_Nom = '''+@LibelleArticle+''');'
+                                <br>		EXEC (@SQL);
+                                <br>	END
+                                <br>GO
+
+                                <br><br>--------------------------------------------------------
+                                <br>-- Procédure d'affichage des libellés pour la facture --
+                                <br>--------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[ConfigFac_Insert] -- v1
+                                <br>@FontSizeTitle int,
+                                <br>@FontSizeMax int,
+                                <br>@FontSizeNor int,
+                                <br>@FontSizeMin int,
+                                <br>@LibTitle varchar(250),
+                                <br>@LibDesc varchar(250),
+                                <br>@LibAdresse varchar(250),
+                                <br>@LibNumTel varchar(250),
+                                <br>@LibThanks varchar(250),
+                                <br>@LibMention varchar(250)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>	IF EXISTS (SELECT ID_ConfigFac FROM [Resto].[CONFIGFACTURE] WHERE ID_ConfigFac = '1')
+                                <br>		BEGIN
+                                <br>		UPDATE [Resto].[CONFIGFACTURE] SET
+                                <br>		ConfigFac_FontSizeTitle = @FontSizeTitle,
+                                <br>		ConfigFac_FontSizeMax = @FontSizeMax,
+                                <br>		ConfigFac_FontSizeNor = @FontSizeNor,
+                                <br>		ConfigFac_FontSizeMin = @FontSizeMin,
+                                <br>		ConfigFac_LibTitle = @LibTitle,
+                                <br>		ConfigFac_LibDesc = @LibDesc,
+                                <br>		ConfigFac_LibAdresse = @LibAdresse,
+                                <br>		ConfigFac_LibNumTel = @LibNumTel,
+                                <br>		ConfigFac_LibThanks = @LibThanks,
+                                <br>		ConfigFac_LibMention = @LibMention
+                                <br>		WHERE ID_ConfigFac = 1;
+                                <br>		END
+                                <br>	ELSE
+                                <br>		BEGIN
+                                <br>		DBCC CHECKIDENT ('Resto.CONFIGFACTURE', RESEED, 0);
+                                <br>		INSERT INTO [Resto].[CONFIGFACTURE]
+                                <br>		(ConfigFac_FontSizeTitle, ConfigFac_FontSizeMax , 
+                                <br>		 ConfigFac_FontSizeNor , ConfigFac_FontSizeMin , 
+                                <br>		 ConfigFac_LibTitle , ConfigFac_LibDesc , 
+                                <br>		 ConfigFac_LibAdresse , ConfigFac_LibNumTel , 
+                                <br>		 ConfigFac_LibThanks , ConfigFac_LibMention)
+                                <br>		VALUES
+                                <br>		(@FontSizeTitle , @FontSizeMax , @FontSizeNor , @FontSizeMin , 
+                                <br>		 @LibTitle , @LibDesc , @LibAdresse , 
+                                <br>		 @LibNumTel , @LibThanks , @LibMention);
+                                <br>		END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>------------------------
+                                <br>-- Partie Facturation --
+                                <br>------------------------
+                                <br>------- Insert ---------
+                                <br>------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Facture_Insert] -- v1
+                                <br>@dateCrea datetime,
+                                <br>@table int,
+                                <br>@couvert int,
+                                <br>@idUser int
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		BEGIN
+                                <br>			INSERT INTO [Resto].[FACTURE](Facture_DateCrea, Facture_TableNum, Facture_NbrCouvert, Facture_PrixTotalTTC, Facture_Validee, Facture_Cloturee, Facture_Modifiee, Facture_DateModif, ID_User)
+                                <br>			VALUES (@dateCrea, @table, @couvert, 0.0, 0, 0, 0, @dateCrea, @idUser);
+                                <br>		END
+                                <br>		BEGIN
+                                <br>			SELECT ID_Facture
+                                <br>			FROM [Resto].[FACTURE]
+                                <br>			WHERE
+                                <br>				[Facture_DateCrea] = @dateCrea
+                                <br>			AND
+                                <br>				[ID_User] = @idUser;
+                                <br>		END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>-------------------------------------------
+                                <br>-- Cherche si une table est déjà utilisé --
+                                <br>-------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Facture_checkTable] -- v1
+                                <br>@table int,
+                                <br>@date datetime
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT count(*)
+                                <br>		FROM [Resto].[FACTURE]
+                                <br>		WHERE
+                                <br>			[Facture_TableNum] = @table
+                                <br>		AND 
+                                <br>			year([Facture_DateCrea]) = year(@date)
+                                <br>		AND
+                                <br>			month([Facture_DateCrea]) = month(@date)
+                                <br>		AND
+                                <br>			day([Facture_DateCrea]) = day(@date)
+                                <br>		AND
+                                <br>			[Facture_Cloturee] = 0
+                                <br>	END
+                                <br>GO
+
+                                <br><br>---------------------------------------------------
+                                <br>-- Modifie le nombre de couvert dans une facture --
+                                <br>---------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Facture_UpdateCouvert] -- v1
+                                <br>@idFacture int,
+                                <br>@Couvert int
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		UPDATE [Resto].[FACTURE] SET
+                                <br>			[Facture_NbrCouvert] = @Couvert
+                                <br>		WHERE
+                                <br>			[ID_Facture] = @idFacture;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>--------------------------------------
+                                <br>-- Modifie les états de la commande --
+                                <br>--------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Facture_AValider] -- V1
+                                <br>@attribut varchar (50),
+                                <br>@id varchar (10)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		IF (@attribut = 'Facture_Validee')
+                                <br>		BEGIN
+                                <br>			UPDATE Resto.FACTURE SET Facture_Validee = 1 WHERE ID_Facture = @id;
+                                <br>		END
+                                <br>		IF (@attribut = 'Facture_Cloturee')
+                                <br>		BEGIN
+                                <br>			UPDATE Resto.FACTURE SET Facture_Cloturee = 1 WHERE ID_Facture = @id;
+                                <br>		END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>ALTER PROCEDURE [Resto].[Facture_AValider] -- v2
+                                <br>@attribut varchar (50),
+                                <br>@id varchar (10),
+                                <br>@valeur bit
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		IF (@attribut = 'Facture_Validee')
+                                <br>		BEGIN
+                                <br>			UPDATE Resto.FACTURE SET Facture_Validee = @valeur WHERE ID_Facture = @id;
+                                <br>		END
+                                <br>		IF (@attribut = 'Facture_Cloturee')
+                                <br>		BEGIN
+                                <br>			UPDATE Resto.FACTURE SET Facture_Cloturee = 1 WHERE ID_Facture = @id;
+                                <br>		END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>---------------------------------------------------------------------
+                                <br>-- Clôture toutes les factures déjà validées par l'interface admin --
+                                <br>---------------------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Commander_UpdateAllFac] -- v1
+                                <br>@DateModif datetime
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		UPDATE [Resto].[FACTURE] SET
+                                <br>		Facture_DateModif = @DateModif,
+                                <br>		Facture_Modifiee = 1,
+                                <br>		Facture_Cloturee = 1
+                                <br>		WHERE Facture_Cloturee = 0
+                                <br>		AND Facture_Validee = 1;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>------------------------------------------------------------------------
+                                <br>-- Modifie le prix de la facture lors de la validation de la commande --
+                                <br>------------------------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Facture_UpdatePrixTotal] -- v1
+                                <br>@idFacture int,
+                                <br>@prixTotal float
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		UPDATE [Resto].[FACTURE] SET
+                                <br>			[Facture_PrixTotalTTC] = @prixTotal
+                                <br>		WHERE
+                                <br>			[ID_Facture] = @idFacture
+                                <br>	END
+                                <br>GO
+
+                                <br><br>--------------------------------------
+                                <br>-- Affichage des Commandes du jours --
+                                <br>--------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Commande_Affichage]
+                                <br>@id int,
+                                <br>@date datetime
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT *
+                                <br>		FROM [Resto].[FACTURE]
+                                <br>		WHERE 
+                                <br>			ID_User = @id
+                                <br>		AND
+                                <br>			Facture_DateCrea BETWEEN ''+@date+' 00:00:00' AND ''+@date+' 23:59:59';
+                                <br>	END
+                                <br>GO
+
+                                <br><br>ALTER PROCEDURE [Resto].[Commande_Affichage] -- v2
+                                <br>@id int,
+                                <br>@date datetime
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT *
+                                <br>		FROM [Resto].[FACTURE]
+                                <br>		WHERE 
+                                <br>			ID_User = @id
+                                <br>		AND
+                                <br>			Facture_DateCrea BETWEEN ''+@date+' 00:00:00' AND ''+@date+' 23:59:59'
+                                <br>		AND
+                                <br>			[Facture_Cloturee] = 'false';
+                                <br>	END
+                                <br>GO
+
+                                <br><br>ALTER PROCEDURE [Resto].[Commande_Affichage] -- v3
+                                <br>@idUser int,
+                                <br>@droit int,
+                                <br>@date datetime
+                                <br>AS
+                                <br>	BEGIN
+                                <br>	IF (@droit >= 1 AND @droit <= 2)
+                                <br>		BEGIN
+                                <br>			SELECT *
+                                <br>			FROM [Resto].[FACTURE]
+                                <br>			WHERE 
+                                <br>				Facture_DateCrea BETWEEN ''+@date+' 00:00:00' AND ''+@date+' 23:59:59'
+                                <br>			AND
+                                <br>				[Facture_Cloturee] = 'false';
+                                <br>		END
+                                <br>	ELSE
+                                <br>		BEGIN
+                                <br>			SELECT *
+                                <br>			FROM [Resto].[FACTURE]
+                                <br>			WHERE 
+                                <br>				ID_User = @idUser
+                                <br>			AND
+                                <br>				Facture_DateCrea BETWEEN ''+@date+' 00:00:00' AND ''+@date+' 23:59:59'
+                                <br>			AND
+                                <br>				[Facture_Cloturee] = 'false';
+                                <br>		END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>------------------------------
+                                <br>-- Insertion d'une commande --
+                                <br>------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Commander_Insert] -- v1
+                                <br>@idFacture int,
+                                <br>@idCarte int,
+                                <br>@idMenu int,
+                                <br>@qte int,
+                                <br>@pref varchar(50),
+                                <br>@serveur bit,
+                                <br>@offert bit,
+                                <br>@insert bit
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		INSERT INTO [Resto].[REL_Commander]([ID_Facture],[ID_Article],[ID_Menu],[Nbr_Article],[Preference_Type],[Voir_Serveur],[Article_offert])
+                                <br>		VALUES (@idFacture, @idCarte, @idMenu, @qte, @pref, @serveur, @offert);
+                                <br>	END
+                                <br>GO
+
+                                <br><br>---------------------------------
+                                <br>-- Insert ou modifie une ligne --
+                                <br>---------------------------------
+
+                                <br><br>ALTER PROCEDURE [Resto].[Commander_Insert] -- v2
+                                <br>@idFacture int,
+                                <br>@idCarte int,
+                                <br>@idMenu int,
+                                <br>@qte int,
+                                <br>@pref varchar(50),
+                                <br>@serveur bit,
+                                <br>@offert bit,
+                                <br>@insert bit
+                                <br>AS
+                                <br>	IF (@insert = 1)
+                                <br>	BEGIN
+                                <br>		BEGIN
+                                <br>			INSERT INTO [Resto].[REL_Commander]([ID_Facture],[ID_Article],[ID_Menu],[Nbr_Article],[Preference_Type],[Voir_Serveur],[Article_offert])
+                                <br>			VALUES (@idFacture, @idCarte, @idMenu, @qte, @pref, @serveur, @offert);
+                                <br>		END
+                                <br>	END
+                                <br>	ELSE
+                                <br>	BEGIN
+                                <br>		UPDATE [Resto].[REL_Commander] SET
+                                <br>			[Nbr_Article] = @qte,
+                                <br>			[Preference_Type] = @pref,
+                                <br>			[Voir_Serveur] = @serveur,
+                                <br>			[Article_offert] = @offert
+                                <br>		WHERE
+                                <br>			[ID_Facture] = @idFacture
+                                <br>		AND
+                                <br>			[ID_Article] = @idCarte
+                                <br>		AND
+                                <br>			[ID_Menu] = @idMenu;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>--------------------------------------------------------------
+                                <br>-- Modifie la qte ou supprime les articles dans une facture --
+                                <br>--------------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Commander_Qte] -- v1
+                                <br>@idFacture int,
+                                <br>@idCarte int,
+                                <br>@idMenu int,
+                                <br>@qte int
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		IF (@qte != 0)
+                                <br>		BEGIN
+                                <br>			UPDATE [Resto].[REL_Commander] SET
+                                <br>				[Nbr_Article] = @qte
+                                <br>			WHERE
+                                <br>				[ID_Facture] = @idFacture
+                                <br>			AND
+                                <br>				[ID_Article] = @idCarte
+                                <br>			AND
+                                <br>				[ID_Menu] = @idMenu;
+                                <br>		END
+                                <br>		ELSE
+                                <br>		BEGIN
+                                <br>			DELETE FROM [Resto].[REL_Commander]
+                                <br>			WHERE
+                                <br>				[ID_Facture] = @idFacture
+                                <br>			AND
+                                <br>				[ID_Article] = @idCarte
+                                <br>			AND
+                                <br>				[ID_Menu] = @idMenu;
+                                <br>		END
+                                <br>	END
+                                <br>GO
+
+                                <br>ALTER PROCEDURE [Resto].[Commander_Qte] -- v2
+                                <br>@idFacture int,
+                                <br>@idCarte int,
+                                <br>@idMenu int,
+                                <br>@qte int,
+                                <br>@gratuit bit
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		IF (@qte != 0)
+                                <br>		BEGIN
+                                <br>			UPDATE [Resto].[REL_Commander] SET
+                                <br>				[Nbr_Article] = @qte
+                                <br>			WHERE
+                                <br>				[ID_Facture] = @idFacture
+                                <br>			AND
+                                <br>				[ID_Article] = @idCarte
+                                <br>			AND
+                                <br>				[ID_Menu] = @idMenu
+                                <br>			AND
+                                <br>				[Article_offert] = @gratuit;
+                                <br>		END
+                                <br>		ELSE
+                                <br>		BEGIN
+                                <br>			DELETE FROM [Resto].[REL_Commander]
+                                <br>			WHERE
+                                <br>				[ID_Facture] = @idFacture
+                                <br>			AND
+                                <br>				[ID_Article] = @idCarte
+                                <br>			AND
+                                <br>				[ID_Menu] = @idMenu
+                                <br>			AND
+                                <br>				[Article_offert] = @gratuit;
+                                <br>		END
+                                <br>	END
+                                <br>GO
+
+                                <br><br>---------------------------------------------------------
+                                <br>-- Recherche les articles enregistrer dans une facture --
+                                <br>---------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Commander_Recherche] -- v1
+                                <br>@idFacture int
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT ID_Facture, ID_Menu, C.ID_Article, Nbr_Article, Preference_Type, Voir_Serveur, Article_offert, Article_Nom, Article_PrixHT
+                                <br>		FROM [Resto].[REL_Commander] C
+                                <br>		INNER JOIN [Resto].[CARTE] A ON C.ID_Article = A.ID_Article
+                                <br>		WHERE ID_Facture = @idFacture;
+                                <br>	END
+                                <br>GO
+
+                                <br><br>ALTER PROCEDURE [Resto].[Commander_Recherche] -- v2
+                                <br>@idFacture int
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT [ID_Facture], [C.ID_Menu], [Menu_Libelle], [C.ID_Article], [Nbr_Article], [Preference_Type], [Voir_Serveur], [Article_offert], [Article_Nom], [Article_PrixHT], [ID_Type], [TVA_Taux]
+                                <br>		FROM [Resto].[REL_Commander] C
+                                <br>		INNER JOIN [Resto].[CARTE] A ON C.ID_Article = A.ID_Article
+                                <br>		INNER JOIN [Resto].[MENU] M ON C.ID_Menu = M.ID_Menu
+                                <br>		INNER JOIN [Resto].[TVA] T ON A.ID_TVA = T.ID_TVA
+                                <br>		WHERE ID_Facture = @idFacture
+                                <br>		ORDER BY ID_Menu,C.ID_Article;
+                                <br>	END
+
+                                <br><br>-----------------------------------------------------------------
+                                <br>-- Compte le nombre de ligne de la Facture N et de l'article M --
+                                <br>-----------------------------------------------------------------
+
+                                <br><br>CREATE PROCEDURE [Resto].[Commander_Nbligne] -- V1
+                                <br>@idFacture int,
+                                <br>@idMenu int,
+                                <br>@labelArticle varchar(50)
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT COUNT(*)
+                                <br>		FROM [Resto].[REL_Commander]
+                                <br>		WHERE 
+                                <br>			ID_Facture = @idFacture
+                                <br>		AND
+                                <br>			ID_Article IN	(	
+                                <br>								SELECT	ID_Article 
+                                <br>								FROM	[Resto].[CARTE] 
+                                <br>								WHERE	[Article_Nom]	= ''+@labelArticle+''
+                                <br>								AND		[ID_Menu]		= ''+@idMenu+''
+                                <br>							);
+                                <br>	END
+                                <br>GO
+
+                                <br><br>ALTER PROCEDURE [Resto].[Commander_Nbligne] -- V2
+                                <br>@idFacture int,
+                                <br>@idMenu int,
+                                <br>@idArticle int,
+                                <br>@gratuit bit
+                                <br>AS
+                                <br>	BEGIN
+                                <br>		SELECT COUNT(*)
+                                <br>		FROM [Resto].[REL_Commander]
+                                <br>		WHERE 
+                                <br>			ID_Facture = @idFacture
+                                <br>		AND
+                                <br>			ID_Article = @idArticle
+                                <br>		AND
+                                <br>			ID_Menu = @idMenu
+                                <br>		AND
+                                <br>			Article_offert = @gratuit
+                                <br>	END
+                                <br>GO<br>
+                            </code></div></div></div>
+                        
+                        <h4>4 - TRIGGERS</h4>
+                            <div style="margin:20px; margin-top:5px"><div class="quotetitle"><b>Spoiler:</b> <input type="button" value="CLIQUEZ ICI POUR AFFICHER LES REQUETES" style="width:80%;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';        this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" /></div><div class="quotecontent"><div style="display: none;"><code>
+                                <br>USE [ServeurResto]
+                                <br>GO
+                                <br>SET ANSI_NULLS ON
+                                <br>GO
+                                <br>SET QUOTED_IDENTIFIER ON
+                                <br>GO
+
+                                <br><br>CREATE TRIGGER [Resto].[DoublonArticle]
+                                <br>ON [Resto].[CARTE]
+                                <br>INSTEAD OF INSERT AS
+
+                                <br><br>if exists ( select * from Resto.CARTE t 
+                                <br>    inner join inserted i on i.Article_Nom=t.Article_Nom)
+                                <br>	begin
+                                <br>		rollback
+                                <br>		RAISERROR ('AJOUT IMPOSSIBLE ! Le nom de cet article existe déjà...', 16, 1);
+                                <br>	end
+                                <br>else
+                                <br>	begin
+                                <br>		INSERT into Resto.CARTE (Article_Disponible,Article_Nom,Article_Format,Article_PrixHT,Article_Supplement,Article_Preference,Article_Alcoolise,ID_Type)
+                                <br>		SELECT Article_Disponible,Article_Nom,Article_Format,Article_PrixHT,Article_Supplement,Article_Preference,Article_Alcoolise,ID_Type FROM inserted;
+                                <br>	end
+                                <br>GO
+
+                                <br><br>CREATE TRIGGER [Resto].[DoublonPseudo]
+                                <br>ON [Resto].[UTILISATEUR]
+                                <br>INSTEAD OF INSERT AS
+
+                                <br><br>if exists ( select * from Resto.UTILISATEUR t 
+                                <br>    inner join inserted i on i.User_Pseudo=t.User_Pseudo)
+                                <br>	begin
+                                <br>		rollback
+                                <br>		RAISERROR ('AJOUT IMPOSSIBLE ! Le Pseudonyme existe déjà...', 16, 1);
+                                <br>	end
+                                <br>else
+                                <br>	begin
+                                <br>		INSERT into Resto.UTILISATEUR (User_Pseudo,User_Password,User_NomReel,User_PrenomReel,User_Telephone,ID_Role) 
+                                <br>		SELECT User_Pseudo,User_Password,User_NomReel,User_PrenomReel,User_Telephone,ID_Role FROM inserted;
+                                <br>	end
+                                <br>GO<br>
+                            </code></div></div></div>
+                        
+                        <h4>5 - ADMIN BDD</h4>
+                            <div style="margin:20px; margin-top:5px"><div class="quotetitle"><b>Spoiler:</b> <input type="button" value="CLIQUEZ ICI POUR AFFICHER LES REQUETES" style="width:80%;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';        this.innerText = ''; this.value = 'Cacher'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Afficher'; }" /></div><div class="quotecontent"><div style="display: none;"><code>
+                                <br>-----------------------------------------
+                                <br>-- CREATION DE L'UTILISATEUR SQLSERVER --
+                                <br>-----------------------------------------
+                                <br>	-- CREATION DES LOGINS --
+                                <br>	-------------------------
+
+                                <br><br>CREATE LOGIN ADMINISTRATEUR
+                                <br>	WITH PASSWORD = 'root', -- MUST_CHANGE,
+                                <br>	DEFAULT_DATABASE = master,
+                                <br>	CHECK_POLICY = OFF,
+                                <br>	CHECK_EXPIRATION = OFF
+                                <br>GO
+
+                                <br><br>USE [ServeurResto]
+                                <br>GO<br>
+                                <br>	-------------------------------
+                                <br>	-- CREATION DES UTILISATEURS --
+                                <br>	-------------------------------
+
+                                <br><br>	CREATE user ADMINISTRATEUR for login ADMINISTRATEUR
+                                <br>	GO
+
+                                <br><br>	------------------------
+                                <br>	-- CREATION D'UN ROLE --
+                                <br>	------------------------
+
+                                <br><br>	CREATE ROLE Administration
+                                <br>		GRANT ALL ON OBJECT::Resto.[ROLE]			TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[UTILISATEUR]	TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[FACTURE]		TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[PAIEMENT]		TO Administration;			
+                                <br>		GRANT ALL ON OBJECT::Resto.[TVA]			TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[PREFERENCE]		TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[TYPEPRODUIT]	TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[CARTE]			TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[MENU]			TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[GARNITURE]		TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[STOCK]			TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[STATSCONSO]		TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[CONFIGFACTURE]	TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[CONFIGCOLOR]	TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[REL_Commander]	TO Administration;
+                                <br>		GRANT ALL ON OBJECT::Resto.[REL_Composer]	TO Administration;
+                                <br>	GO
+
+                                <br><br>	-------------------------
+                                <br>	-- AJOUTER A UN GROUPE --
+                                <br>	-------------------------
+                                <br><br>	EXECUTE sp_addrolemember 'Administration','ADMINISTRATEUR'
+                                <br>	GO<br>
+                            </code></div></div></div>
+                                                
+                                
+                    </div>  
+                </div>
+                
+            </div>
+        </div>
+
+        <!--= CORE JavaScript =-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>		    
+	<script src="js/ie10-viewport-bug-workaround.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Minut'Papillon - Documentation officielle</title>
+        <meta charset="utf-8">                                                  <!-- Prise en charge textuelle selon la norme UTF-8 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">                   <!-- Assure que IE utilise dernière version du moteur de rendu-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- Gestion des zooms, ici occupation de tt l'espace, a 100% -->
+        <meta name="description" content="Page test Bootstrap">
+        <meta name="author" content="COUPEZ Frédéric">
+            
+        <link rel="icon" href="img/favicon.ico">            
+        <link href="css/bootstrap.min.css" rel="stylesheet">   <!-- Bootstrap core CSS -->
+        <link href="css/dashboard.css" rel="stylesheet"> <!-- Theme Custom -->
+        
+        <!-- Si IE < IE9, html5shiv creer des éléments pour que IE8 interprete correctement HTML5, respond permet le Responsive Web Design -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>	
+        <!--= BARRE PRINCIPALE DE NAVIGATION (TOP) =-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <a class="navbar-brand" href="index.html">Minut'Papillon</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="HowToUseIt.html">Manuel d'utilisation</a></li> 
+                <li><a href="Cahier.html">Cahier des charges</a></li>                 
+                <li><a href="BDD.html">BDD</a></li>
+                <li><a href="CSharp.html">C#</a></li>
+                <li><a href="about.html">A propos...</a></li>   
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <!--= CONTAINER (BODY) =-->
+        <div class="container-fluid">
+            <div class="row">
+                
+                <!--= MENU DE NAVIGATION (LEFT) =-->
+                <div class="col-sm-2 col-md-2 sidebar">
+                    <div class="sidebar-module">
+                        <h4><u>Contacts</u></h4>
+                      <ol class="list-unstyled"><p>
+                         <b>Frédéric COUPEZ</b>
+                        <li><a target="_blank" href="mailto:coupez.frederic@gmail.com">&#9993; E-Mail</a></li> 
+                        <li><a target="_blank" href="https://openclassrooms.com/membres/fredericcoupez">OpenClassrooms</a></li>
+                        <li><a target="_blank" href="http://www.viadeo.com/profile/00219tbzo5oivr9b">Viadeo</a></li>
+                        <li><a target="_blank" href="https://fr.linkedin.com/pub/frédéric-coupez/b7/556/9b7">LinkedIn</a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/frederic.coupez">Facebook</a></li>
+                        <li><a target="_blank" href="https://twitter.com/FR02_Neo_Ryu">Twitter</a></li>
+                        <li><a target="_blank" href="https://plus.google.com/u/0/114133401923803091894/about">Google+</a></li>
+                      </p><br><p>
+                         <b>Guillaume MASSON</b>
+                        <li><a target="_blank" href="mailto:g.masson02@gmail.com">&#9993; E-Mail</a></li> 
+                        <li><a target="_blank" href="https://www.linkedin.com/pub/guillaume-masson/b6/7a/a55">LinkedIn</a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/guillaume.masson.10">Facebook</a></li>
+                        <li><a target="_blank" href="https://twitter.com/Ademptus">Twitter</a></li>
+                        <li><a target="_blank" href="https://plus.google.com/u/0/105575174943782506613/about">Google+</a></li>
+                      </p></ol>
+                    </div>  
+                </div>
+                
+                <!--= SECTION DE CONTENU (RIGHT) =--> <!-- <div class="col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-2 main"> -->
+                <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 main">
+                  <h1 class="page-header">A Propos...</h1>
+                  
+                    <!--= ALBUM PHOTO (TOP) =-->
+                    <div class="row placeholders">                       
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <a href="#" data-toggle="modal" data-target=".pop-up-1"><img src="img/MadeInFrance.jpg" class="img-responsive" alt="Made in France"></a>
+                        </div>
+                        <!-- Apercu de l'image -->
+                        <div class="modal fade pop-up-1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-2" aria-hidden="true">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myLargeModalLabel-2">Made in France</h4>
+                              </div>
+                              <div class="modal-body">
+                              <img src="img/MadeInFrance.jpg" class="img-responsive img-rounded center-block" alt="">
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div>
+                
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <a href="#" data-toggle="modal" data-target=".pop-up-2"><img src="img/LOGO_MinutPapillon.png" class="img-responsive" alt="Logo Minut'Papillon"></a>
+                        </div>
+                        <!-- Apercu de l'image -->
+                        <div class="modal fade pop-up-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-2" aria-hidden="true">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myLargeModalLabel-2">Logo de l'application Minut'Papillon</h4>
+                              </div>
+                              <div class="modal-body">
+                              <img src="img/LOGO_MinutPapillon.png" class="img-responsive img-rounded center-block" alt="">
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div>
+                        
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <a href="#" data-toggle="modal" data-target=".pop-up-3"><img src="img/Logo_Afpa.png" class="img-responsive" alt="AFPA"></a>
+                            <h4>AFPA</h4>
+                          <span class="text-muted"><a href="http://www.afpa.fr" target="_blank">www.afpa.fr</a></span>
+                        </div>
+                        <!-- Apercu de l'image -->
+                        <div class="modal fade pop-up-3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-2" aria-hidden="true">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myLargeModalLabel-2">AFPA - La formation professionnelle</h4>
+                              </div>
+                              <div class="modal-body">
+                              <img src="img/Logo_Afpa.png" class="img-responsive img-rounded center-block" alt="">
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div>
+                        
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <a href="#" data-toggle="modal" data-target=".pop-up-4"><img src="img/Logo_Picardie.png" class="img-responsive" alt="Picardie"></a>
+                            <h4>Conseil Régional</h4>
+                          <span class="text-muted"><a href="http://www.picardie.fr/" target="_blank">www.picardie.fr/</a></span>
+                        </div>
+                        <!-- Apercu de l'image -->
+                        <div class="modal fade pop-up-4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-2" aria-hidden="true">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myLargeModalLabel-2">La région Picardie</h4>
+                              </div>
+                              <div class="modal-body">
+                              <img src="img/Logo_Picardie.png" class="img-responsive img-rounded center-block" alt="">
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div>
+                                            
+                    </div> 
+
+                  <!--= CONTENU DESCRIPTIF (CENTER) =-->
+                  <h2 class="sub-header">Droits accordés</h2>
+                    <div class="table-responsive">
+                        <p>Dans un but pedagogique, et toujours dans le respect de l'oeuvre et des droits moraux de ses auteurs, sont accordés aux centres de formations de l'AFPA :
+                        <br>- Le droit de traduction (avec obligation de laisser la mention des auteurs d'origine) ;
+                        <br>- Le droit de modification (avec obligation de laisser la mention des auteurs d'origine) ;
+                        <br>- Le droit de reproduction (diffusion de l'application au sein des différents centres AFPA, par simple demande par courriel pour nous informer, y compris si il s'agit de l'oeuvre modifiée).</p>
+                        
+                        <p><br>Veuillez n'utiliser les courriels et profils fournis ci-contre que dans le but de contacter les auteurs de
+                        cette application dans les termes du contrat determinant les droits susnommés. 
+                        <br>Tout abus portant atteinte au strict respect de la vie privée et de l'intégrité des auteurs pourra 
+                        entraîner des poursuites pénales. Merci de votre compréhension.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!--= CORE JavaScript =-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>		    
+	<script src="js/ie10-viewport-bug-workaround.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    </body>
+</html>

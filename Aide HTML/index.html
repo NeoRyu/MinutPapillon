@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Minut'Papillon - Documentation officielle</title>
+        <meta charset="utf-8">                                                  <!-- Prise en charge textuelle selon la norme UTF-8 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">                   <!-- Assure que IE utilise dernière version du moteur de rendu-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- Gestion des zooms, ici occupation de tt l'espace, a 100% -->
+        <meta name="description" content="Page test Bootstrap">
+        <meta name="author" content="COUPEZ Frédéric">
+            
+        <link rel="icon" href="img/favicon.ico">            
+        <link href="css/bootstrap.min.css" rel="stylesheet">   <!-- Bootstrap core CSS -->
+        <link href="css/dashboard.css" rel="stylesheet"> <!-- Theme Custom -->
+        
+        <!-- Si IE < IE9, html5shiv creer des éléments pour que IE8 interprete correctement HTML5, respond permet le Responsive Web Design -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>	
+        <!--= BARRE PRINCIPALE DE NAVIGATION (TOP) =-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">Minut'Papillon</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="HowToUseIt.html">Manuel d'utilisation</a></li> 
+                <li><a href="Cahier.html">Cahier des charges</a></li>                 
+                <li><a href="BDD.html">BDD</a></li>
+                <li><a href="CSharp.html">C#</a></li>
+                <li><a href="about.html">A propos...</a></li>   
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <!--= CONTAINER (BODY) =-->
+        <div class="container-fluid">
+            <div class="row">
+                
+                <!--= MENU DE NAVIGATION (LEFT) =-->
+                <div class="col-sm-2 col-md-2 sidebar">
+                  <ul class="nav nav-sidebar">
+                    <li class="active"><a href="index.html">Présentation<span class="sr-only">(current)</span></a></li>
+                    <li><a href="install.html">Procédure d'installation</a></li>
+                    <li><a href="about.html">Droits d'utilisation</a></li>
+                  <br></ul>
+                    <h4><b>DOCS</b></h4>
+                    <b><u>Cahier des charges</u></b>
+                    <ul class="nav nav-sidebar">
+                      <li><a href="Cahier.html">- Attente du client</a></li>
+                      <li><a href="Cahier.html#2">- Périmètre d'application</a></li>
+                      <li><a href="Cahier.html#3">- Exigences du client</a></li>
+                    </ul>
+                    <b><u>Manuel d'utilisation</u></b>
+                  <ul class="nav nav-sidebar">
+                    <li><a href="HowToUseIt.html">- Connexion</a></li>
+                    <li><a href="HowToUseIt.html#2">- Administration</a></li>
+                    <li><a href="HowToUseIt.html#3">- Prise de commandes</a></li>
+                  <br></ul>  
+                    <b><u>Programmation</u></b>
+                  <ul class="nav nav-sidebar">
+                    <li><a href="BDD.html#3">- Base de Donnée</a></li>
+                    <li><a href="CSharp.html">- Application (C#)</a></li>
+                  </ul>
+                </div>
+                
+                
+                <!--= SECTION DE CONTENU (RIGHT) =--> <!-- <div class="col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-2 main"> -->
+                <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 main">
+                  <h1 align="center" class="page-header">MINUT'PAPILLON</h1>
+                  
+                    <!--= ALBUM PHOTO (TOP) =-->
+                    <div class="row placeholders">                       
+                                                
+                    </div> 
+
+                  <!--= CONTENU DESCRIPTIF (CENTER) =-->
+                  <h2 class="sub-header">INTRODUCTION</h2>
+                    <div class="table-responsive">
+                        <p>La démarche de création de cette application s’inscrit dans un besoin déterminé permettant à la formation de Serveur en Restauration de progresser et d’obtenir un outil de travail en adéquation avec les attentes et exigences des formateurs de cette filière.<br>
+                            Par ailleurs, afin de combler le manque, cette application pourra être utilisée comme outil pédagogique dans les prochaines sessions.</p>
+                    </div>
+                  <h2 class="sub-header">A PROPOS DU MÉTIER DE SERVEUR EN RESTAURATION…</h2>
+                  <div class="table-responsive">
+                      <p>Le serveur en restauration organise à l’avance le service en préparant la salle et en mémorisant les lieux du rangement du matériel. 
+                      <ul><li>Il vérifie les supports de communication : cartes des vins, ardoise du jour, menu du jour en affichage extérieur… pendant le service, il anticipe le déroulé de l’action de plusieurs tables qui lui sont attribuées, parfois jusqu’à une trentaine de clients, et travaille en liaison avec la cuisine. 
+                      <br><li>Il observe constamment ce qui se passe dans la salle et doit répondre aux imprévus. 
+                      <br><li>Il réalise l’ensemble ou partie des travaux nécessaires au service de mets. 
+                      <br><li>Il peut également confectionner des mets simples : hors d’œuvres, desserts. 
+                      <br><li>Il a un rôle déterminant dans l’accueil et le bien-être de la clientèle et participe, par la qualité de son service et de ces conseils aux clients, à la valorisation de la prestation réalisée en cuisine. 
+                      <br><li>Il a un rôle commercial important lors de la prise de commande des mets et des vins.</ul></p>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!--= CORE JavaScript =-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>		    
+	<script src="js/ie10-viewport-bug-workaround.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    </body>
+</html>

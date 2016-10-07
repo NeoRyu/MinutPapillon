@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Minut'Papillon - Documentation officielle</title>
+        <meta charset="utf-8">                                                  <!-- Prise en charge textuelle selon la norme UTF-8 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">                   <!-- Assure que IE utilise dernière version du moteur de rendu-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- Gestion des zooms, ici occupation de tt l'espace, a 100% -->
+        <meta name="description" content="Page test Bootstrap">
+        <meta name="author" content="COUPEZ Frédéric">
+            
+        <link rel="icon" href="img/favicon.ico">            
+        <link href="css/bootstrap.min.css" rel="stylesheet">   <!-- Bootstrap core CSS -->
+        <link href="css/dashboard.css" rel="stylesheet"> <!-- Theme Custom -->
+        
+        <!-- Si IE < IE9, html5shiv creer des éléments pour que IE8 interprete correctement HTML5, respond permet le Responsive Web Design -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>	
+        <!--= BARRE PRINCIPALE DE NAVIGATION (TOP) =-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <a class="navbar-brand" href="index.html">Minut'Papillon</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="HowToUseIt.html">Manuel d'utilisation</a></li> 
+                <li><a href="Cahier.html">Cahier des charges</a></li>                 
+                <li><a href="BDD.html">BDD</a></li>
+                <li><a href="CSharp.html">C#</a></li>
+                <li><a href="about.html">A propos...</a></li>  
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <!--= CONTAINER (BODY) =-->
+        <div class="container-fluid">
+            <div class="row">
+                
+                <!--= MENU DE NAVIGATION (LEFT) =-->
+                <div class="col-sm-2 col-md-2 sidebar">
+                    <div class="sidebar-module">
+                        TODO
+                    </div>  
+                </div>
+                
+                <!--= SECTION DE CONTENU (RIGHT) =--> <!-- <div class="col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-2 main"> -->
+                <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 main">
+                  <h1 class="page-header">PROCÉDURE D'INSTALLATION</h1>
+                  <!--= CONTENU DESCRIPTIF (CENTER) =-->
+                  <h2 class="sub-header">[<a>BDD</a>] Base De Données</h2>
+                    <div class="table-responsive">
+                        <p>TODO</p>
+                    </div>
+                  <h2 class="sub-header">[<a>EXE</a>] Application</h2>
+                    <div class="table-responsive">
+                        <p>TODO</p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        <!--= CORE JavaScript =-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>		    
+	<script src="js/ie10-viewport-bug-workaround.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    </body>
+</html>

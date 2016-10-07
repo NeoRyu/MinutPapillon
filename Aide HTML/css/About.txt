@@ -1,0 +1,10 @@
+bootstrap.css comporte les classes de base de Bootstrap ;
+bootstrap.min.css comporte les mêmes classes de base que bootstrap.css mais est compressé ;
+bootstrap-theme.css contient des règles de styles particulières pour créer un thème spécifique pour Bootstrap ;
+bootstrap-theme.min.css est identique à bootstrap-theme.css mais est compressé ;
+glyphicons-halflings-regular.svg comporte la collection d'icônes au format svg ;
+glyphicons-halflings-regular.ttf comporte la collection d'icônes au format ttf ;
+glyphicons-halflings-regular.woff comporte la collection d'icônes au format woff ;
+glyphicons-halflings-regular.eot comporte la collection d'icônes au format eot ;
+bootstrap.js contient le code JavaScript des composants de Bootstrap ;
+bootstrap.min.js contient le même code JavaScript mais est compressé ;

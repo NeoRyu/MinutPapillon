@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32D1552D-E2EA-4421-8B40-D7311DEC3BD8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MinutPapillon</RootNamespace>
+    <AssemblyName>MinutPapillon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="sharpPDF">
+      <HintPath>..\sharpPDF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Materia.cs" />
+    <Compile Include="Classes\Control.cs" />
+    <Compile Include="Classes\Design.cs" />
+    <Compile Include="Classes\Mutare .cs" />
+    <Compile Include="Classes\Shell.cs" />
+    <Compile Include="Classes\Core.cs" />
+    <Compile Include="Controles\CU_Carte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CU_Carte.Designer.cs">
+      <DependentUpon>CU_Carte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CU_Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CU_Menu.Designer.cs">
+      <DependentUpon>CU_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CU_Rechercher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CU_Rechercher.Designer.cs">
+      <DependentUpon>CU_Rechercher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CU_ColorBt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CU_ColorBt.Designer.cs">
+      <DependentUpon>CU_ColorBt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CU_Commande.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CU_Commande.Designer.cs">
+      <DependentUpon>CU_Commande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CU_Stock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CU_Stock.Designer.cs">
+      <DependentUpon>CU_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CU_StatsGlobales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CU_StatsGlobales.Designer.cs">
+      <DependentUpon>CU_StatsGlobales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CU_Facture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CU_Facture.Designer.cs">
+      <DependentUpon>CU_Facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\PDFCreator.cs" />
+    <Compile Include="Form_about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_about.Designer.cs">
+      <DependentUpon>Form_about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_commandes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_commandes.Designer.cs">
+      <DependentUpon>Form_commandes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_administration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_administration.Designer.cs">
+      <DependentUpon>Form_administration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_connexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_connexion.Designer.cs">
+      <DependentUpon>Form_connexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controles\CU_Utilisateur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\CU_Utilisateur.Designer.cs">
+      <DependentUpon>CU_Utilisateur.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controles\CU_Carte.resx">
+      <DependentUpon>CU_Carte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CU_Commande.resx">
+      <DependentUpon>CU_Commande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CU_Facture.resx">
+      <DependentUpon>CU_Facture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CU_Menu.resx">
+      <DependentUpon>CU_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CU_Rechercher.resx">
+      <DependentUpon>CU_Rechercher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CU_ColorBt.resx">
+      <DependentUpon>CU_ColorBt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CU_StatsGlobales.resx">
+      <DependentUpon>CU_StatsGlobales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\CU_Stock.resx">
+      <DependentUpon>CU_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_about.resx">
+      <DependentUpon>Form_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_commandes.resx">
+      <DependentUpon>Form_commandes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_administration.resx">
+      <DependentUpon>Form_administration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_connexion.resx">
+      <DependentUpon>Form_connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Controles\CU_Utilisateur.resx">
+      <DependentUpon>CU_Utilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGLuxury.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGPatternGray.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interfaceserveur_on.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interfaceserveur_off.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clavier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADMIN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_AFPÄ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pac-miam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG_AdminServeur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\porte-sortie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_ConsReg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wood.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO_MinutPapillon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

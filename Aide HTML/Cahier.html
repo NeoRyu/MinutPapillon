@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Minut'Papillon - Documentation officielle</title>
+        <meta charset="utf-8">                                                  <!-- Prise en charge textuelle selon la norme UTF-8 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">                   <!-- Assure que IE utilise dernière version du moteur de rendu-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- Gestion des zooms, ici occupation de tt l'espace, a 100% -->
+        <meta name="description" content="Page test Bootstrap">
+        <meta name="author" content="COUPEZ Frédéric">
+            
+        <link rel="icon" href="img/favicon.ico">            
+        <link href="css/bootstrap.min.css" rel="stylesheet">   <!-- Bootstrap core CSS -->
+        <link href="css/dashboard.css" rel="stylesheet"> <!-- Theme Custom -->
+        
+        <!-- Si IE < IE9, html5shiv creer des éléments pour que IE8 interprete correctement HTML5, respond permet le Responsive Web Design -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>	
+        <!--= BARRE PRINCIPALE DE NAVIGATION (TOP) =-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <a class="navbar-brand" href="index.html">Minut'Papillon</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="HowToUseIt.html">Manuel d'utilisation</a></li> 
+                <li><a href="Cahier.html">Cahier des charges</a></li>                 
+                <li><a href="BDD.html">BDD</a></li>
+                <li><a href="CSharp.html">C#</a></li>
+                <li><a href="about.html">A propos...</a></li>  
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <!--= CONTAINER (BODY) =-->
+        <div class="container-fluid">
+            <div class="row">
+                
+                <!--= MENU DE NAVIGATION (LEFT) =-->
+                <div class="col-sm-2 col-md-2 sidebar">
+                    <div class="sidebar-module">
+                      ¤ <b>SOMMAIRE</b> ¤
+                      <ul class="nav nav-sidebar">
+                        <li><a href="Cahier.html#1">Attente du client</a></li>
+                        <li><a href="Cahier.html#2">Périmètre d'application</a></li>
+                        <li><a href="Cahier.html#3">Exigences du client</a></li>
+                        <li><a href="Cahier.html#4">Tests Unitaires</a></li>
+                      </ul>
+                    </div>  
+                </div>
+                
+                <!--= SECTION DE CONTENU (RIGHT) =--> <!-- <div class="col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-2 main"> -->
+                <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 main">
+                  <h1 class="page-header">CAHIER DES CHARGES FONCTIONNEL</h1>
+                  <!--= CONTENU DESCRIPTIF (CENTER) =-->
+                  <h2 class="sub-header"><a name="1">1</a>/ Attente du client</h2>
+                    <div class="table-responsive">
+                        <p>La demande consiste précisément en la réalisation d’un logiciel de gestion de factures, qui par ailleurs permettra la prise de commandes en restauration, ainsi que de gestion de stocks. 
+                        <br><br>La formation de Serveur en Restauration à l’AFPA de Laon venant d’ouvrir, elle ne possède actuellement aucun logiciel permettant l’édition de facture. Ce type de logiciel est obligatoire pour le passage des stagiaires devant le jury ayant pour mission de valider leur année. L’acquisition d’un tel logiciel serait trop onéreuse, et impacterai sur d’autres achats dont la formation aurait pu s’octroyer pour augmenter la qualité de cette dernière. Sa réalisation répond donc à une demande réelle et primordiale. </p>
+                    </div>
+                  <h2 class="sub-header"><a name="2">2</a>/ Périmètre d'application</h2>
+                    <div class="table-responsive">
+                        <p>Afin de satisfaire à la demande du formateur, à savoir Mr Gabaut Olivier, responsable de la formation Serveur en restauration, le respect des exigences demandées sont nombreuses. La demande du client consiste à reproduire au mieux les fonctionnalités des logiciels de facturation actuellement utilisés par les professionnels de la restauration.
+                        <br><br>La gestion des factures doit permettre de pouvoir consulter en tout temps le contenu détaillé tel qu’établi le jour de l’impression ; et permettre d’être imprimé selon un modèle graphique prédéfini par le client (voir section IHM EXIGÉE) au format A4 ;
+                        <br><br>La gestion des prises de commandes doit être tout aussi complète. Elle doit permettre au serveur de pouvoir accéder simplement et rapidement à chaque élément composant la carte, mais aussi de pouvoir sélectionner un menu. Elle doit être accessible « tout public » (composée de textes, images et couleurs) afin que des personnes de tout niveau culturel puissent savoir s’en servir sans trop de difficulté. </p>
+                    </div>
+                  <h2 class="sub-header"><a name="3">3</a>/ Exigences du client</h2>
+                    <div class="table-responsive">
+                        <h4>A/ <u>Gestion des factures :</u></h4><p>
+                        Les factures doivent pouvoir être consultables ultérieurement.
+                        <br><br>->	Dois apparaître sur la facture, dans l’ordre :
+                        Le nom du restaurant, centré ;<ul>
+                        <li>	L’adresse du restaurant ;
+                        <li>	Le logo du restaurant (ici AFPA) dans le coin supérieur droit ;
+                        <li>	Le numéro de table ; ET le nombre de couverts pour cette table ;
+                        <li>	La date et l’heure à laquelle a été imprimée la facture ;
+                        <li>	Le détail complet de la commande de la table ;
+                        <li>	Le prix Toutes Taxes Comprises (TTC) ; ET « Dont TVA » en Euros (€) à 20.6% ;
+                        <li>	Le nom du serveur, suivi d’un petit texte de remerciement ;
+                        <li>	Une phrase « Service compris 15% », en miniature en bas de page.</ul>
+                        ->	Le détail des commandes :<ul>
+                        <li>	Doit rassembler les menus et les commandes à la carte identiques sur une même ligne ;
+                        <li>	Doit faire figurer le nombre de chacun des éléments qui la compose ;
+                        <li>	Ne doit pas afficher les garnitures, ni la préférence de cuisson ou d’assaisonnement ;
+                        <li>	Doit trier les éléments de la commande par chronologie du repas ;
+                        <li>	Doit différencier les accompagnements gratuits des consommations payantes (EX : Whisky-Coca > On déduit la bouteille de coca du stock, sans la facturer au client)</ul>
+                        ->	Le paiement clôture une commande.
+                        <br><br>->	Un serveur ne peut pas imprimer une facture clôturée, seul l’administrateur le peut.<br><br></p>
+                        
+                        <h4>B/ <u>Gestion des prises de commandes :</u></h4><p>
+                        L’interface doit permettre de saisir rapidement, et simplement chaque élément de la carte.
+                        <br><br>->	Si l’utilisateur de l’interface clique sur un nombre avant de cliquer sur un élément, ce nombre indiquera combien de fois cet élément sera commandé. (EX : « 6 » et « EAU » = 6x EAU)
+                        <br>->	Le serveur doit pouvoir supprimer rapidement une ligne composant la commande, sans confirmation préalable par souci de rapidité.
+                        <br>->	Il doit être possible de sélectionner à la fois un ou plusieurs menus ainsi que des éléments composant la carte du restaurant dans la commande en cours.
+                        <br>->	Un menu se compose d’une entrée (au choix parmi deux), d’un plat principal (au choix parmi deux), et d’un dessert (au choix parmi deux).<br><br></p>
+
+                        <h4>C/ <u>Concernant la gestion des stocks :</u></h4><p>
+                        Chaque plat possédant une fiche technique comportant les données quantifiées de chaque ingrédient la composant, et cette fiche n’ayant pas besoin d’être gérée au sein même de l’application (à la demande du client), il n’y a aucun besoin de rentrer dans ce genre de détail à notre niveau.
+                        <br><br>->	 L’administrateur de l’application doit pouvoir entrer manuellement les arrivages de marchandises et produits, qui seront ajoutés automatiquement au stock actuel.
+                        <br>->	Doivent figurer obligatoirement les informations suivantes :<ul>
+                        <li>	La date d’achat ;
+                        <li>	Le prix global ;
+                        <li>	La quantité achetée ;
+                        <li>	Le stock restant.</ul><br></p>
+                        
+                        <p><h4>D/ <u>Concernant la gestion des droits d’accès :</u></h4>
+                        Un compte administrateur doit pouvoir permettre de consulter et éditer les factures, les éléments (produits), les stocks et les statistiques. De manière générale il peut intervenir sur chacune des tables composant la base de données plus ou moins directement sans aucune notion de programmation.
+                        <br><br>->	Un compte ADMIN permettant de pouvoir intervenir pour modifier une commande clôturée.
+                        <br>->	Un (ou plusieurs) compte Administrateur permettant de pouvoir consulter et éditer a convenance la base de donnée directement via l’interface.
+                        <br>->	Plusieurs comptes Serveur permettant aux détenteurs de pouvoir prendre les commandes et facturer cette dernière.
+                        <br>->	Un compte Serveur ne permet pas d’accéder aux paramètres réservés aux administrateurs.<br><br></p>
+                        
+                        <h4>E/ <u>Autres points à prendre en compte :</u></h4><p>
+                        <br>->	Une table ne peux pas être redésignée si elle actuellement occupée. Un message d’erreur indiquera alors ce fait.
+                        <br>->	Possibilité de modifier le numéro de table d’une commande et le nombre de couverts.
+                        <br>->	Un cocktail est composé de 3 ingrédients ou plus, un alcool de 1 à 2 max.
+                        <br>->	Le montant de la TVA (20%) est à déduire du prix TTC, est sera exprimée en Euros (0€00)
+                        <br>->	Une commande doit être clôturée pour être imprimée, mais si elle est clôturée, un serveur ne peut plus la modifier sans l’intervention d’un responsable (administrateur). En cas d’intervention du responsable, il doit alors imprimer lui-même la facture.
+                        <br>->	Alerte en cas d’article en fin de stock.<br><br></p>
+                    </div>
+                  <h2 class="sub-header"><a name="4">4</a>/ Tests Unitaires</h2>
+                    <div class="table-responsive">
+                        <p><b><i>TODO</i></b></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!--= CORE JavaScript =-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>		    
+	<script src="js/ie10-viewport-bug-workaround.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    </body>
+</html>
